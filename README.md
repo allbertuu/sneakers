@@ -88,7 +88,7 @@ Users should be able to:
 ## Author 🙎🏻‍♂️
 
 <!-- - Website - [Add your name here](https://www.your-site.com) -->
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@allbertuu](https://www.frontendmentor.io/profile/allbertuu)
 - LinkedIn - [Alberto Albuquerque](https://www.linkedin.com/in/albertov-albuquerque/)
 
 ## Acknowledgments ⭐
