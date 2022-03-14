@@ -15,28 +15,40 @@ const Product = () => {
 
   const [mainImg, setMainImg] = useState(img1);
 
-  const handleClick = (img) => {
+  const changeImg = (img) => {
     setMainImg(img);
   }
 
+  const openModal = () => {
+    // setMainImg(img);
+    // alert('AAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+  }
+
   return (
-    <section className="l-product">
-      <img id='mainImg' src={mainImg} alt="Imagem principal do produto" />
-      <div className="product-images">
-        <div onClick={(e) => handleClick(img1)} className="first">
-          <img src={img1_small} alt="Imagem do produto" className="first" />
+    <>
+      <section className="l-product">
+        <img id='mainImg' src={mainImg} alt="Imagem principal do produto" onClick={openModal} />
+        <div className="product-images">
+          <div onClick={(e) => changeImg(img1)} className="first">
+            <img src={img1_small} alt="Imagem do produto" className="first" />
+          </div>
+          <div onClick={(e) => changeImg(img2)}>
+            <img src={img2_small} alt="Imagem do produto" />
+          </div>
+          <div onClick={(e) => changeImg(img3)}>
+            <img src={img3_small} alt="Imagem do produto" />
+          </div>
+          <div onClick={(e) => changeImg(img4)}>
+            <img src={img4_small} alt="Imagem do produto" />
+          </div>
         </div>
-        <div onClick={(e) => handleClick(img2)}>
-          <img src={img2_small} alt="Imagem do produto" />
-        </div>
-        <div onClick={(e) => handleClick(img3)}>
-          <img src={img3_small} alt="Imagem do produto" />
-        </div>
-        <div onClick={(e) => handleClick(img4)}>
-          <img src={img4_small} alt="Imagem do produto" />
-        </div>
+      </section>
+
+      {/* Modal */}
+      <div>
+        
       </div>
-    </section>
+    </>
   );
 }
 

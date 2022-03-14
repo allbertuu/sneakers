@@ -13,7 +13,7 @@
     }
   }
 
-  .btn-count {
+  button {
     @apply flex justify-center items-center flex-1;
 
     padding: 0 0.5rem;
@@ -83,26 +83,26 @@
         p-6 space-x-2 rounded-b 
         border-t border-gray-200 dark:border-gray-600;
 
-        .btn {
+        button {
           @apply focus:ring-4 rounded-lg 
           px-5 py-2.5
           font-medium text-sm;
-        }
 
-        .agree {
-          background-color: var(--orange);
-          @apply text-white text-center
-          hover:bg-orange-600 
-          focus:ring-orange-300
-          dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800;
-        }
+          &.agree {
+            background-color: var(--orange);
+            @apply text-white text-center
+            hover:bg-orange-600 
+            focus:ring-orange-300
+            dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800;
+          }
 
-        .disagree {
-          @apply text-gray-500 hover:text-gray-900 
-          bg-white hover:bg-gray-100 
-          focus:ring-gray-300
-          border border-gray-200 px-5 py-2.5 focus:z-10 
-          dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600;
+          &.disagree {
+            @apply text-gray-500 hover:text-gray-900 
+            bg-white hover:bg-gray-100 
+            focus:ring-gray-300
+            border border-gray-200 px-5 py-2.5 focus:z-10 
+            dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600;
+          }
         }
       }
     }

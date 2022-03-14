@@ -25,6 +25,7 @@ const Count = () => {
       return;
     } else {
       modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
     }
   }
 
@@ -35,17 +36,18 @@ const Count = () => {
     } 
     else {
       modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
     }
   }
 
   return (
     <>
       <div className="count">
-        <button className="btn-count" onClick={less}>
+        <button onClick={less}>
           <img src={iconMinus} alt='menos 1' />
         </button>
         <div className="display">{count}</div>
-        <button className="btn-count" onClick={(e) => setCount(count + 1)}>
+        <button onClick={(e) => setCount(count + 1)}>
           <img src={iconPlus} alt='mais 1' />
         </button>
       </div>
@@ -56,7 +58,7 @@ const Count = () => {
           <div className="modal-content">
             <div className="modal-header">
               <h3>
-                Preste atenção
+                Oops!
               </h3>
               <button type="button" onClick={(e) => closeModal('avisoModal')}>
                 <img src={btnClose} alt="Fechar modal" />
@@ -64,12 +66,11 @@ const Count = () => {
             </div>
             <div className="modal-body">
               <p>
-                Não aperte para remover sem ter nada na contagem. Obrigado.
+                Please, don't press the remove button without having something in the count.
               </p>
             </div>
             <div className="modal-footer">
-              <button onClick={(e) => closeModal('avisoModal')} type="button" className="btn agree">I accept</button>
-              <button onClick={(e) => closeModal('avisoModal')} type="button" className="btn disagree">Decline</button>
+              <button onClick={(e) => closeModal('avisoModal')} type="button" className="agree">Ok</button>
             </div>
           </div>
         </div>
