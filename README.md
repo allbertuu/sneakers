@@ -18,7 +18,7 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 
 ## Overview
 
-### The challenge
+### The challenge ⚡
 
 Users should be able to:
 
@@ -29,22 +29,22 @@ Users should be able to:
 - Add items to the cart
 - View the cart and remove items from it
 
-### Screenshot
+### Screenshot 📷
 
 ![](./screenshot.jpg)
 
-### Links
+### Links 🚀
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-## My process
+## My process ⌨
 
 1. First I started thinking and making the HTML structure of the page, from the top to bottom.  
 2. Therefore I made the header first, separating between navbar and personal information.  
 3. Then I did the main part of the page, separating between product and description. Both are components because I realized they needed to share information between themselves.
 
-### Built with
+### Built with ⚙
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -54,7 +54,7 @@ Users should be able to:
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 
-### What I learned
+### What I learned 📚
 
 #### CSS
 - Use the order property - flexbox  
@@ -69,41 +69,28 @@ Users should be able to:
 - Understand how React Contexts work
 - Practice with React Hooks
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-### Continued development
+### Continued development 🎯
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
 - Refine my knowledge of create responsive elements
 - Improve use of the react contexts
 
-### Useful resources
+### Useful resources ✨
 
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
-## Author
+## Author 🙎🏻‍♂️
 
 <!-- - Website - [Add your name here](https://www.your-site.com) -->
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
 - LinkedIn - [Alberto Albuquerque](https://www.linkedin.com/in/albertov-albuquerque/)
 
-## Acknowledgments
+## Acknowledgments ⭐
 
 I'm so thankful for [Iuri Silva](https://github.com/iuricode), that helped me a lot with his posts about web programming and some tips related.  
+Thank to [SatellaSoft](https://www.youtube.com/watch?v=NXdjf6GJSKo&ab_channel=SatellaSoft) and your channel on YouTube, where I learned how to create a modal with only pure javascript. 
 
 
 [Back to the 🔝](#frontend-mentor---e-commerce-product-page-solution)
