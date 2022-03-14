@@ -1,4 +1,6 @@
 import logoImg from '../../assets/images/logo.svg';
+import iconCart from '../../assets/images/icon-cart.svg';
+import imgAvatar from '../../assets/images/image-avatar.png';
 import navBars from '../../assets/images/icon-menu.svg';
 
 import '../../styles/Header.scss';
@@ -8,7 +10,7 @@ const Header = () => {
     <header>
       <section className="navbar">
         <div className="logo">
-          <a href="#">
+          <a href="/">
             <img src={logoImg} alt="logo" />
           </a>
         </div>
@@ -26,8 +28,12 @@ const Header = () => {
         </nav>
       </section>
       <section className="personal">
-        <div className='cart'></div>
-        <div className="profile"></div>
+        <div className='cart'>
+          <img src={iconCart} alt="Cart" />
+        </div>
+        <div className="profile">
+          <img src={imgAvatar} alt="Avatar" />
+        </div>
       </section>
     </header>
   );
