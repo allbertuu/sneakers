@@ -67,9 +67,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 **CSS**
 - How to use the order property - flexbox  
-- More knowledge about building responsive websites
+- More knowledge about building responsive websites  
 **HTML**
-- Improvement of my thinking logic in building the website structure right at the beginning of the entire building process
+- Improvement of my thinking logic in building the website structure right at the beginning of the entire building process  
 **React.js**
 - To be more used to using components
 
@@ -95,6 +95,9 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
+1. Refine my knowledge of create responsive elements
+2. Improve use of the react contexts
+
 **Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
@@ -114,6 +117,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I'm so thankful for [Iuri Silva](https://github.com/iuricode), that helped me a lot with his posts about web programming and some tips related.
