@@ -10,7 +10,7 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 
 ## Table of contents
 
-- [Overview](#overview-)
+- [Overview](#overview)
   - [The challenge](#the-challenge-)
   - [Screenshot](#screenshot-)
   - [Links](#links-)
@@ -19,7 +19,7 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
   - [What I learned](#what-i-learned-)
   - [Continued development](#continued-development-)
   - [Useful resources](#useful-resources-)
-- [Author](#author-)
+- [Author](#author-%EF%B8%8F)
 - [Acknowledgments](#acknowledgments-)
 
 ## Overview
