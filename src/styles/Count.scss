@@ -35,3 +35,76 @@
     cursor: default;
   }
 }
+
+.l-modal {
+  @apply hidden 
+  overflow-y-auto overflow-x-hidden 
+  fixed right-0 left-0 top-0 z-50 
+  pt-4
+  h-full w-full
+  bg-slate-800/80
+  md:inset-0;
+
+  .modal {
+    @apply relative px-4 max-w-2xl h-full md:h-auto 
+    m-auto md:mt-20;
+
+    .modal-content {
+      @apply relative bg-white rounded-lg shadow dark:bg-gray-700;
+
+      .modal-header {
+        @apply flex justify-between items-start 
+        p-5 
+        rounded-t 
+        border-b dark:border-gray-600;
+
+        h3 {
+          @apply text-xl font-semibold text-gray-900 lg:text-2xl dark:text-white;
+        }
+
+        button {
+          @apply text-sm marker:text-gray-400 hover:text-gray-900 dark:hover:text-white
+          bg-transparent hover:bg-gray-200 dark:hover:bg-gray-600
+          rounded-lg p-1.5 ml-auto 
+          inline-flex items-center;
+        }
+      }
+      
+      .modal-body {
+        @apply p-6 space-y-6;
+
+        p {
+          @apply text-base leading-relaxed text-gray-500 dark:text-gray-400;
+        }
+      }
+
+      .modal-footer {
+        @apply flex items-center 
+        p-6 space-x-2 rounded-b 
+        border-t border-gray-200 dark:border-gray-600;
+
+        .btn {
+          @apply focus:ring-4 rounded-lg 
+          px-5 py-2.5
+          font-medium text-sm;
+        }
+
+        .agree {
+          background-color: var(--orange);
+          @apply text-white text-center
+          hover:bg-orange-600 
+          focus:ring-orange-300
+          dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800;
+        }
+
+        .disagree {
+          @apply text-gray-500 hover:text-gray-900 
+          bg-white hover:bg-gray-100 
+          focus:ring-gray-300
+          border border-gray-200 px-5 py-2.5 focus:z-10 
+          dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600;
+        }
+      }
+    }
+  }
+}
