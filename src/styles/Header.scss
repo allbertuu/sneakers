@@ -1,0 +1,42 @@
+header {
+  @apply flex items-center md:block
+  px-8 md:px-0 md:pt-8 
+  h-16 md:h-20 lg:h-auto;
+
+  @media (min-width: 640px) {
+    & {
+      border-bottom: 1px solid var(--gray-blue);
+    }
+  }
+
+  .navbar {
+    display: flex;
+    @apply gap-4 lg:gap-12;
+
+    .logo {
+      @apply order-2 lg:order-1;
+    }
+
+    nav {
+      @apply order-1 lg:order-2;
+
+      .bars {
+        @apply lg:hidden;
+      }
+
+      ul {
+        gap: 2rem;
+        @apply hidden lg:flex md:h-14;
+
+        li {
+          color: var(--dark-blue);
+          &:hover {
+            border-bottom: 3px solid var(--orange);
+            font-weight: 700;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

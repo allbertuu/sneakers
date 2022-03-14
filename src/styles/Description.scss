@@ -1,0 +1,55 @@
+.l-description {
+  @apply flex flex-col justify-center flex-1 
+  px-8 md:px-0 mb-12 sm:mb-0;
+
+  .brand {
+    color: var(--orange);
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: small;
+  }
+  .title {
+    font-weight: 700;
+    @apply text-2xl md:text-3xl lg:text-5xl
+    pt-2 pb-4 lg:pt-4 lg:pb-6;
+  }
+  .text {
+    font-size: 1rem;
+    color: var(--dark-gray-blue);
+
+    padding-bottom: 1.5rem;
+  }
+  .price {
+    @apply font-bold
+    flex flex-col gap-1;
+    padding-bottom: 2rem;
+
+    .with-discount {
+      @apply flex items-center gap-4;
+
+      p {
+        @apply text-2xl;
+      }
+      
+      .discount {
+        color: var(--orange);
+        background-color: var(--light-orange);
+        @apply text-base
+        rounded-md px-1
+        ;
+      }
+    }
+
+    .no-discount {
+      color: var(--gray-blue);
+      text-decoration: line-through;
+      @apply text-base;
+    }
+  }
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    font-weight: 700;
+    @apply flex-col lg:flex-row;
+  }
+}
