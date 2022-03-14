@@ -57,11 +57,13 @@ Users should be able to:
 ### What I learned
 
 #### CSS
-- How to use the order property - flexbox  
+- Use the order property - flexbox  
 - More knowledge about building responsive websites
 - Change the color of elements that has been highlighted by the user
 #### HTML
 - Improvement of my thinking logic in building the website structure right at the beginning of the entire building process  
+#### JavaScript
+- Create a modal with pure javascript
 #### React.js
 - To be more used to using components
 - Understand how React Contexts work
