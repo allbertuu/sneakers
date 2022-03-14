@@ -9,9 +9,7 @@ function App() {
     <div className="page">
       <Header />
       <main>
-        {/* // product */}
         <Product />
-        {/* // description */}
         <Description />
       </main>
     </div>
