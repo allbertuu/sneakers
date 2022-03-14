@@ -25,6 +25,11 @@ body {
     display: flex;
     @apply flex-col sm:flex-row gap-4 sm:gap-14 lg:gap-20
     sm:px-8 sm:py-16;
+
+    ::selection {
+      color: white;
+      background-color: var(--orange);
+    }
   }
 }
 
