@@ -21,12 +21,6 @@ const Description = () => {
         </div>
         <p className="no-discount">250.00</p>
       </div>
-      {/* 
-    description-brand
-    description-title
-    description-text
-    description-price
-    description-buttons */}
       <div className="buttons">
         <Count />
         <Button type="addToCart" />

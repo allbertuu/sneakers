@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import 'flowbite';
 
 import iconMinus from "../assets/images/icon-minus.svg";
 import iconPlus from "../assets/images/icon-plus.svg";
@@ -15,7 +14,7 @@ const Count = () => {
       setCount(count - 1);
     }
     else if (count === 0) {
-      // toggleModal('avisoModal');
+      // aviso;
     }
   }
 
