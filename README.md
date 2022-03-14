@@ -71,15 +71,13 @@ Users should be able to:
 
 ### Continued development 🎯
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-- Refine my knowledge of create responsive elements
-- Improve use of the react contexts
+- Refine my knowledge of create responsive pages
+- Improve the use of the React Contexts
+- Create modals more easily.
 
 ### Useful resources ✨
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb?hl=en) - This helped me to viewing my page on different screens at once. I really liked this extension and I think you too.
 
 ## Author 🙎🏻‍♂️
 
