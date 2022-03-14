@@ -33,17 +33,16 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
+
+1. First I started thinking and making the HTML structure of the page, from the top to bottom.  
+2. Therefore I made the header first, separating between navbar and personal information.  
+3. Then I did the main part of the page, separating between product and description. Both are components because I realized they needed to share information between themselves.
 
 ### Built with
 
@@ -86,10 +85,8 @@ const proudOfThisFunc = () => {
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-1. Refine my knowledge of create responsive elements
-2. Improve use of the react contexts
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- Refine my knowledge of create responsive elements
+- Improve use of the react contexts
 
 ### Useful resources
 
