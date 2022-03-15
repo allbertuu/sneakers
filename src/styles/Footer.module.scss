@@ -1,0 +1,27 @@
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--orange);
+
+  .l_footer {
+    @apply flex justify-center
+    p-4 md:p-8
+    text-white;
+    
+    .author {
+      font-style: italic;
+
+      a {
+        font-weight: 700;
+        font-style: normal;
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
