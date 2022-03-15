@@ -42,8 +42,8 @@
   fixed right-0 left-0 top-0 z-50 
   pt-4
   h-full w-full
-  bg-slate-800/80
   md:inset-0;
+  background-color: var(--bg-light-black);
 
   .modal {
     @apply relative px-4 max-w-2xl h-full md:h-auto 
