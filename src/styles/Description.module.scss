@@ -1,6 +1,7 @@
 .l_description {
   @apply flex flex-col justify-center flex-1 
   px-8 md:px-0 mb-12 sm:mb-0;
+  max-width: 500px;
 
   .brand {
     color: var(--orange);
