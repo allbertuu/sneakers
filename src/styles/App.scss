@@ -9,12 +9,17 @@
   --dark-gray-blue: hsl(219, 9%, 45%);
   --gray-blue: hsl(220, 14%, 75%);
   --light-gray-blue: hsl(223, 64%, 98%);
-  --bg-light-black: hsl(0, 0%, 0%);
+  --bg-light-black: hsla(0, 0%, 0%, 0.75);
 }
 
 body {
   font-size: 1rem;
   font-family: "Kumbh Sans", sans-serif;
+
+  ::selection {
+    color: white;
+    background-color: var(--orange);
+  }
 }
 
 .page {
@@ -23,13 +28,8 @@ body {
 
   main {
     display: flex;
-    @apply flex-col sm:flex-row gap-4 md:gap-12 lg:gap-20
+    @apply flex-col sm:flex-row sm:justify-center gap-4 md:gap-12 lg:gap-20
     sm:px-10 sm:py-16;
-
-    ::selection {
-      color: white;
-      background-color: var(--orange);
-    }
   }
 }
 
