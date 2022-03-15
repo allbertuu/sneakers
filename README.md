@@ -63,17 +63,19 @@ Users should be able to:
 ### What I learned 📚
 
 #### CSS
-- Use the order property - flexbox  
+- Using the order property - flexbox  
 - More knowledge about building responsive websites
-- Change the color of elements that has been highlighted by the user
+- Changing the color of elements that has been highlighted by the user
 #### HTML
 - Improvement of my thinking logic in building the website structure right at the beginning of the entire building process  
 #### JavaScript
-- Create a modal with pure javascript
+- Creating a modal with pure javascript
 #### React.js
-- To be more used to using components
-- Understand how React Contexts work
-- Practice with React Hooks
+- Being more used to using components
+- Understanding how React Contexts work
+- Practicing with React Hooks
+- Using map loop for create dynamic elements
+- Using CSS Modules to only style components (without having a CSS Global) 
 
 ### Continued development 🎯
 
