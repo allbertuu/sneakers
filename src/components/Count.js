@@ -4,7 +4,7 @@ import iconMinus from "../assets/images/icon-minus.svg";
 import iconPlus from "../assets/images/icon-plus.svg";
 import btnClose from "../assets/images/btn-close.svg";
 
-import '../styles/Count.scss';
+import styles from '../styles/Count.module.scss';
 
 const Count = () => {
 
@@ -42,21 +42,21 @@ const Count = () => {
 
   return (
     <>
-      <div className="count">
+      <div className={styles.count}>
         <button onClick={less}>
           <img src={iconMinus} alt='menos 1' />
         </button>
-        <div className="display">{count}</div>
+        <div className={styles.display}>{count}</div>
         <button onClick={(e) => setCount(count + 1)}>
           <img src={iconPlus} alt='mais 1' />
         </button>
       </div>
 
       {/* Modal */}
-      <div id="avisoModal" aria-hidden="true" className="l-modal">
-        <div className="modal">
-          <div className="modal-content">
-            <div className="modal-header">
+      <div id="avisoModal" aria-hidden="true" className={styles.l_modal}>
+        <div className={styles.modal}>
+          <div className={styles.modal_content}>
+            <div className={styles.modal_header}>
               <h3>
                 Oops!
               </h3>
@@ -64,13 +64,13 @@ const Count = () => {
                 <img src={btnClose} alt="Fechar modal" />
               </button>
             </div>
-            <div className="modal-body">
+            <div className={styles.modal_body}>
               <p>
                 Please, don't press the remove button without having something in the count.
               </p>
             </div>
-            <div className="modal-footer">
-              <button onClick={(e) => closeModal('avisoModal')} type="button" className="agree">Ok</button>
+            <div className={styles.modal_footer}>
+              <button onClick={(e) => closeModal('avisoModal')} type="button" className={styles.agree}>Ok</button>
             </div>
           </div>
         </div>

@@ -36,7 +36,7 @@
   }
 }
 
-.l-modal {
+.l_modal {
   @apply hidden 
   overflow-y-auto overflow-x-hidden 
   fixed right-0 left-0 top-0 z-50 
@@ -49,10 +49,10 @@
     @apply relative px-4 max-w-2xl h-full md:h-auto 
     m-auto md:mt-20;
 
-    .modal-content {
+    .modal_content {
       @apply relative bg-white rounded-lg shadow dark:bg-gray-700;
 
-      .modal-header {
+      .modal_header {
         @apply flex justify-between items-start 
         p-5 
         rounded-t 
@@ -70,7 +70,7 @@
         }
       }
       
-      .modal-body {
+      .modal_body {
         @apply p-6 space-y-6;
 
         p {
@@ -78,7 +78,7 @@
         }
       }
 
-      .modal-footer {
+      .modal_footer {
         @apply flex items-center 
         p-6 space-x-2 rounded-b 
         border-t border-gray-200 dark:border-gray-600;

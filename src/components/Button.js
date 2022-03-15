@@ -1,18 +1,18 @@
 import iconCart from '../assets/images/icon-cart-white.svg';
 
-import '../styles/Button.scss';
+import styles from '../styles/Button.module.scss';
 
 const Button = ({ type }) => {
   return (
     <>
       {type === 'addToCart' &&
-        <button className="addToCart">
+        <button className={styles.addToCart}>
           <img src={iconCart} alt='Cart' />
           Add to cart
         </button>
       }
       {type === 'checkout' &&
-        <button className="checkout">
+        <button className={styles.checkout}>
           Checkout
         </button>
       }

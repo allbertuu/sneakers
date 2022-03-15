@@ -1,4 +1,4 @@
-.l-description {
+.l_description {
   @apply flex flex-col justify-center flex-1 
   px-8 md:px-0 mb-12 sm:mb-0;
 
@@ -19,12 +19,12 @@
 
     padding-bottom: 1.5rem;
   }
-  .price {
+  .l_price {
     @apply font-bold
     flex flex-col gap-1;
     padding-bottom: 2rem;
 
-    .with-discount {
+    .with_discount {
       @apply flex items-center gap-4;
 
       p {
@@ -40,13 +40,13 @@
       }
     }
 
-    .no-discount {
+    .no_discount {
       color: var(--gray-blue);
       text-decoration: line-through;
       @apply text-base;
     }
   }
-  .buttons {
+  .l_buttons {
     display: flex;
     gap: 1rem;
     font-weight: 700;

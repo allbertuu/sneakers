@@ -20,7 +20,7 @@ header {
     nav {
       @apply order-1 lg:order-2;
 
-      .bars {
+      .bars_icon {
         @apply lg:hidden;
       }
 
@@ -43,7 +43,7 @@ header {
   .personal {
     @apply flex items-center md:items-stretch gap-4 md:gap-8;
 
-    .cart {
+    .cart_icon {
       @apply hover:cursor-pointer;
     }
 

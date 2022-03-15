@@ -1,27 +1,25 @@
 import Count from '../Count';
 import Button from '../Button';
 
-import '../../styles/Description.scss';
-import '../../styles/Button.scss';
-import '../../styles/Description.scss';
+import styles from '../../styles/Description.module.scss';
 
 const Description = () => {
   return (
-    <section className="l-description">
-      <p className="brand">SNEAKERS COMPANY</p>
-      <h1 className="title">Fall Limited Edition Sneakers</h1>
-      <p className="text">
+    <section className={styles.l_description}>
+      <p className={styles.brand}>SNEAKERS COMPANY</p>
+      <h1 className={styles.title}>Fall Limited Edition Sneakers</h1>
+      <p className={styles.text}>
         These low-profile sneakers are your perfect casual wear companion.
         Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
       </p>
-      <div className="price">
-        <div className="with-discount">
+      <div className={styles.l_price}>
+        <div className={styles.with_discount}>
           <p>125.00</p>
-          <div className="discount">50%</div>
+          <div className={styles.discount}>50%</div>
         </div>
-        <p className="no-discount">250.00</p>
+        <p className={styles.no_discount}>250.00</p>
       </div>
-      <div className="buttons">
+      <div className={styles.l_buttons}>
         <Count />
         <Button type="addToCart" />
       </div>

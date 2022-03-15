@@ -3,35 +3,36 @@ import iconCart from '../../assets/images/icon-cart.svg';
 import imgAvatar from '../../assets/images/image-avatar.png';
 import navBars from '../../assets/images/icon-menu.svg';
 
-import '../../styles/Header.scss';
+import styles from '../../styles/Header.module.scss';
 
 const Header = () => {
+
+  const pages = ['Collections', 'Men', 'Women', 'About', 'Contact'];
+
   return (
     <header>
-      <section className="navbar">
-        <div className="logo">
+      <section className={styles.navbar}>
+        <div className={styles.logo}>
           <a href="/">
             <img src={logoImg} alt="logo" />
           </a>
         </div>
         <nav>
-          <button className="bars">
+          <button className={styles.bars_icon}>
             <img src={navBars} alt="Barra de navegação" />
           </button>
           <ul>
-            <li>Collections</li>
-            <li>Men</li>
-            <li>Women</li>
-            <li>About</li>
-            <li>Contact</li>
+            {pages.map((page, key) => (
+              <li key={key}>{page}</li>
+            ))}
           </ul>
         </nav>
       </section>
-      <section className="personal">
-        <div className='cart'>
+      <section className={styles.personal}>
+        <div className={styles.cart_icon}>
           <img src={iconCart} alt="Cart" />
         </div>
-        <div className="profile">
+        <div className={styles.profile}>
           <img src={imgAvatar} alt="Avatar" />
         </div>
       </section>
