@@ -23,7 +23,7 @@ body {
 
   main {
     display: flex;
-    @apply flex-col sm:flex-row gap-4 sm:gap-8 lg:gap-20
+    @apply flex-col sm:flex-row gap-4 md:gap-12 lg:gap-20
     sm:px-10 sm:py-16;
 
     ::selection {
