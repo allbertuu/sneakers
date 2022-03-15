@@ -11,20 +11,16 @@
   .product_images {
     @apply hidden sm:flex gap-2 md:gap-4 lg:gap-8;
 
-    div.first {
-      border: 2px solid var(--orange);
-      @apply rounded-xl;
-    }
+    // > div {
+    //   border: 2px solid var(--orange);
+    //   @apply rounded-xl;
+    // }
 
     img {
       .select {
         opacity: 1;
       }
       @apply rounded-xl;
-
-      &.first {
-        opacity: 0.5;
-      }
 
       &:hover {
         opacity: 0.5;
@@ -40,6 +36,6 @@
   fixed right-0 left-0 top-0 z-50
   justify-center items-center
   h-full w-full
-  bg-slate-800/80
   md:inset-0;
+  background-color: var(--bg-light-black);
 }
