@@ -45,19 +45,19 @@ const Product = () => {
   return (
     <>
       <section className={styles.l_product}>
-        <img src={mainImg} alt="Imagem principal do produto" onClick={(e) => openModal('modalProduct')} />
+        <img src={mainImg} alt="Main product image" onClick={(e) => openModal('modalProduct')} />
         <div className={styles.product_images}>
           <div onClick={(e) => changeImg(img1)}>
-            <img src={img1_small} alt="Imagem do produto" />
+            <img src={img1_small} alt="Product image" />
           </div>
           <div onClick={(e) => changeImg(img2)}>
-            <img src={img2_small} alt="Imagem do produto" />
+            <img src={img2_small} alt="Product image" />
           </div>
           <div onClick={(e) => changeImg(img3)}>
-            <img src={img3_small} alt="Imagem do produto" />
+            <img src={img3_small} alt="Product image" />
           </div>
           <div onClick={(e) => changeImg(img4)}>
-            <img src={img4_small} alt="Imagem do produto" />
+            <img src={img4_small} alt="Product image" />
           </div>
         </div>
       </section>
@@ -70,21 +70,21 @@ const Product = () => {
           </button>
           <div className="flex">
             {/* <button className="absolute">X</button> */}
-            <img src={mainImg} alt="Imagem principal do produto" className='sm:rounded-2xl' />
+            <img src={mainImg} alt="Main product image" className='sm:rounded-2xl' />
             {/* <button className="absolute right-1/3">X</button> */}
           </div>
           <div className={styles.product_images}>
             <div onClick={(e) => changeImg(img1)}>
-              <img src={img1_small} alt="Imagem do produto" />
+              <img src={img1_small} alt="Product image" />
             </div>
             <div onClick={(e) => changeImg(img2)}>
-              <img src={img2_small} alt="Imagem do produto" />
+              <img src={img2_small} alt="Product image" />
             </div>
             <div onClick={(e) => changeImg(img3)}>
-              <img src={img3_small} alt="Imagem do produto" />
+              <img src={img3_small} alt="Product image" />
             </div>
             <div onClick={(e) => changeImg(img4)}>
-              <img src={img4_small} alt="Imagem do produto" />
+              <img src={img4_small} alt="Product image" />
             </div>
           </div>
         </section>
