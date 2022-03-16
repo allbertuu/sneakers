@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 import iconMinus from "../assets/images/icon-minus.svg";
 import iconPlus from "../assets/images/icon-plus.svg";
@@ -15,30 +15,17 @@ function Count() {
       setCount(count - 1);
     }
     else if (count === 0) {
-      openModal('avisoModal');
+      setIsOpen();
     }
   }
 
-  function openModal(id) {
-    let modal = document.getElementById(id);
-    if (typeof modal == undefined || modal === null) {
-      return;
-    } else {
-      modal.style.display = 'block';
-      document.body.style.overflow = 'hidden';
-    }
+  // Hook
+  const useToggle = (initialState = false) => {
+    const [isOpen, setIsOpen] = useState(initialState);
+    const toggle = useCallback(() => setIsOpen(isOpen => !isOpen), []);
+    return [isOpen, toggle]
   }
-
-  function closeModal(id) {
-    let modal = document.getElementById(id);
-    if (typeof modal == undefined || modal === null) {
-      return;
-    }
-    else {
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
-  }
+  const [isOpen, setIsOpen] = useToggle();
 
   return (
     <>
@@ -52,29 +39,30 @@ function Count() {
         </button>
       </div>
 
-      {/* Modal */}
-      <div id="avisoModal" aria-hidden="true" className={styles.l_modal}>
-        <div className={styles.modal}>
-          <div className={styles.modal_content}>
-            <div className={styles.modal_header}>
-              <h3>
-                Oops!
-              </h3>
-              <button type="button" onClick={(e) => closeModal('avisoModal')}>
-                <img src={btnClose} alt="Fechar modal" />
-              </button>
-            </div>
-            <div className={styles.modal_body}>
-              <p>
-                Please, don't press the remove button without having something in the count.
-              </p>
-            </div>
-            <div className={styles.modal_footer}>
-              <button onClick={(e) => closeModal('avisoModal')} type="button" className={styles.agree}>Ok</button>
+      {isOpen &&
+        <div aria-hidden="true" className={styles.l_modal}>
+          <div className={styles.modal}>
+            <div className={styles.modal_content}>
+              <div className={styles.modal_header}>
+                <h3>
+                  Oops!
+                </h3>
+                <button type="button" onClick={(e) => setIsOpen()}>
+                  <img src={btnClose} alt="Fechar modal" />
+                </button>
+              </div>
+              <div className={styles.modal_body}>
+                <p>
+                  Please, don't press the remove button without having something in the count.
+                </p>
+              </div>
+              <div className={styles.modal_footer}>
+                <button onClick={(e) => setIsOpen()} type="button" className={styles.agree}>Ok</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      }
     </>
   );
 }

@@ -37,8 +37,7 @@
 }
 
 .l_modal {
-  @apply hidden 
-  overflow-y-auto overflow-x-hidden 
+  @apply overflow-y-auto overflow-x-hidden 
   fixed right-0 left-0 top-0 z-50 
   pt-4
   h-full w-full
