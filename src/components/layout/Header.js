@@ -44,7 +44,7 @@ function Header() {
         <div className={styles.cart_icon}>
           <img src={iconCart} alt="Cart" onClick={(e) => setIsOpen()} />
         </div>
-        <div className={styles.profile}>
+        <div className={isOpen ? styles.profile_active : styles.profile}>
           <img src={imgAvatar} alt="Avatar" onClick={(e) => setIsOpen()} />
         </div>
       </section>

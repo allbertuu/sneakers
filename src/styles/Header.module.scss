@@ -61,6 +61,13 @@ header {
         }
       }
     }
+    .profile_active {
+      img {
+        @apply h-6 md:h-12 md:-mt-4
+        hover:cursor-pointer rounded-full;
+        border: 2px solid var(--orange);
+      }
+    }
   }
 
   .cart_modal {
