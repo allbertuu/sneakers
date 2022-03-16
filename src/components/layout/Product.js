@@ -13,16 +13,16 @@ import iconClose from '../../assets/images/icon-close-white.svg';
 
 import styles from '../../styles/Product.module.scss';
 
-const Product = () => {
+function Product() {
 
   const [mainImg, setMainImg] = useState(img1);
 
-  const changeImg = (img) => {
+  function changeImg(img) {
     setMainImg(img);
     // aplicar estilos de selecionado à imagem menor que foi selecionada
   }
 
-  const openModal = (id) => {
+  function openModal(id) {
     let modal = document.getElementById(id);
     if (typeof modal == undefined || modal === null) {
       return;
@@ -32,7 +32,7 @@ const Product = () => {
     }
   }
 
-  const closeModal = (id) => {
+  function closeModal(id) {
     let modal = document.getElementById(id);
     if (typeof modal == undefined || modal === null) {
       return;
@@ -45,19 +45,19 @@ const Product = () => {
   return (
     <>
       <section className={styles.l_product}>
-        <img src={mainImg} alt="Main product image" onClick={(e) => openModal('modalProduct')} />
+        <img src={mainImg} alt="Main product" onClick={(e) => openModal('modalProduct')} />
         <div className={styles.product_images}>
           <div onClick={(e) => changeImg(img1)}>
-            <img src={img1_small} alt="Product image" />
+            <img src={img1_small} alt="Product" />
           </div>
           <div onClick={(e) => changeImg(img2)}>
-            <img src={img2_small} alt="Product image" />
+            <img src={img2_small} alt="Product" />
           </div>
           <div onClick={(e) => changeImg(img3)}>
-            <img src={img3_small} alt="Product image" />
+            <img src={img3_small} alt="Product" />
           </div>
           <div onClick={(e) => changeImg(img4)}>
-            <img src={img4_small} alt="Product image" />
+            <img src={img4_small} alt="Product" />
           </div>
         </div>
       </section>
@@ -70,21 +70,21 @@ const Product = () => {
           </button>
           <div className="flex">
             {/* <button className="absolute">X</button> */}
-            <img src={mainImg} alt="Main product image" className='sm:rounded-2xl' />
+            <img src={mainImg} alt="Main product" className='sm:rounded-2xl' />
             {/* <button className="absolute right-1/3">X</button> */}
           </div>
           <div className={styles.product_images}>
             <div onClick={(e) => changeImg(img1)}>
-              <img src={img1_small} alt="Product image" />
+              <img src={img1_small} alt="Product" />
             </div>
             <div onClick={(e) => changeImg(img2)}>
-              <img src={img2_small} alt="Product image" />
+              <img src={img2_small} alt="Product" />
             </div>
             <div onClick={(e) => changeImg(img3)}>
-              <img src={img3_small} alt="Product image" />
+              <img src={img3_small} alt="Product" />
             </div>
             <div onClick={(e) => changeImg(img4)}>
-              <img src={img4_small} alt="Product image" />
+              <img src={img4_small} alt="Product" />
             </div>
           </div>
         </section>
