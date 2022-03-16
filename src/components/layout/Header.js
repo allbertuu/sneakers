@@ -5,7 +5,7 @@ import navBars from '../../assets/images/icon-menu.svg';
 
 import styles from '../../styles/Header.module.scss';
 
-const Header = () => {
+function Header() {
 
   const pages = ['Collections', 'Men', 'Women', 'About', 'Contact'];
 

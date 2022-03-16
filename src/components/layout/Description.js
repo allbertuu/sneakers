@@ -3,7 +3,7 @@ import Button from '../Button';
 
 import styles from '../../styles/Description.module.scss';
 
-const Description = () => {
+function Description() {
   return (
     <section className={styles.l_description}>
       <p className={styles.brand}>SNEAKERS COMPANY</p>

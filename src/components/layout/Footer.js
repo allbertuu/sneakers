@@ -1,6 +1,6 @@
 import styles from '../../styles/Footer.module.scss';
 
-const Footer = () => {
+function Footer() {
   return (
     <footer>
       <div className={styles.l_footer}>

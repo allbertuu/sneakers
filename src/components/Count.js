@@ -2,15 +2,15 @@ import { useState } from "react";
 
 import iconMinus from "../assets/images/icon-minus.svg";
 import iconPlus from "../assets/images/icon-plus.svg";
-import btnClose from "../assets/images/btn-close.svg";
+import btnClose from "../assets/images/close-modal.svg";
 
 import styles from '../styles/Count.module.scss';
 
-const Count = () => {
+function Count() {
 
   const [count, setCount] = useState(0);
 
-  const less = (e) => {
+  function less(e) {
     if (count > 0) {
       setCount(count - 1);
     }
@@ -33,7 +33,7 @@ const Count = () => {
     let modal = document.getElementById(id);
     if (typeof modal == undefined || modal === null) {
       return;
-    } 
+    }
     else {
       modal.style.display = 'none';
       document.body.style.overflow = 'auto';
