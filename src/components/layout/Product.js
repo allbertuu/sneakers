@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import img1_small from '../../assets/images/image-product-1-thumbnail.jpg';
 import img1 from '../../assets/images/image-product-1.jpg';
@@ -22,30 +22,18 @@ function Product() {
     // aplicar estilos de selecionado à imagem menor que foi selecionada
   }
 
-  function openModal(id) {
-    let modal = document.getElementById(id);
-    if (typeof modal == undefined || modal === null) {
-      return;
-    } else {
-      modal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    }
+  //hook useToggle
+  const useToggle = (initialState = false) => {
+    const [isOpen, setIsOpen] = useState(initialState);
+    const toggle = useCallback(() => setIsOpen(isOpen => !isOpen), []);
+    return [isOpen, toggle]
   }
-
-  function closeModal(id) {
-    let modal = document.getElementById(id);
-    if (typeof modal == undefined || modal === null) {
-      return;
-    } else {
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
-  }
+  const [isOpen, setIsOpen] = useToggle();
 
   return (
     <>
       <section className={styles.l_product}>
-        <img src={mainImg} alt="Main product" onClick={(e) => openModal('modalProduct')} />
+        <img src={mainImg} alt="Main product" onClick={(e) => setIsOpen()} />
         <div className={styles.product_images}>
           <div onClick={(e) => changeImg(img1)}>
             <img src={img1_small} alt="Product" />
@@ -62,33 +50,34 @@ function Product() {
         </div>
       </section>
 
-      {/* Modal */}
-      <div id="modalProduct" aria-hidden="true" className={styles.l_modal}>
-        <section className={styles.l_product}>
-          <button className="lg:-mb-4 text-right" onClick={(e) => closeModal('modalProduct')}>
-            <img src={iconClose} className="inline-block w-6" alt='Button close' />
-          </button>
-          <div className="flex">
-            {/* <button className="absolute">X</button> */}
-            <img src={mainImg} alt="Main product" className='sm:rounded-2xl' />
-            {/* <button className="absolute right-1/3">X</button> */}
-          </div>
-          <div className={styles.product_images}>
-            <div onClick={(e) => changeImg(img1)}>
-              <img src={img1_small} alt="Product" />
+      {isOpen &&
+        <div aria-hidden="true" className={styles.l_modal}>
+          <section className={styles.l_product}>
+            <button className="lg:-mb-4 text-right" onClick={(e) => setIsOpen()}>
+              <img src={iconClose} className="inline-block w-6" alt='Button close' />
+            </button>
+            <div className="flex">
+              {/* <button className="absolute">X</button> */}
+              <img src={mainImg} alt="Main product" className='sm:rounded-2xl' />
+              {/* <button className="absolute right-1/3">X</button> */}
             </div>
-            <div onClick={(e) => changeImg(img2)}>
-              <img src={img2_small} alt="Product" />
+            <div className={styles.product_images}>
+              <div onClick={(e) => changeImg(img1)}>
+                <img src={img1_small} alt="Product" />
+              </div>
+              <div onClick={(e) => changeImg(img2)}>
+                <img src={img2_small} alt="Product" />
+              </div>
+              <div onClick={(e) => changeImg(img3)}>
+                <img src={img3_small} alt="Product" />
+              </div>
+              <div onClick={(e) => changeImg(img4)}>
+                <img src={img4_small} alt="Product" />
+              </div>
             </div>
-            <div onClick={(e) => changeImg(img3)}>
-              <img src={img3_small} alt="Product" />
-            </div>
-            <div onClick={(e) => changeImg(img4)}>
-              <img src={img4_small} alt="Product" />
-            </div>
-          </div>
-        </section>
-      </div>
+          </section>
+        </div>
+      }
     </>
   );
 }
