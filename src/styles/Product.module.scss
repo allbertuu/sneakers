@@ -4,17 +4,12 @@
   sm:max-w-lg;
 
   > img {
-    @apply sm:rounded-2xl;
+    @apply sm:rounded-2xl hover:cursor-pointer;
     min-width: 250px;
   }
 
   .product_images {
     @apply hidden sm:flex gap-2 md:gap-4 lg:gap-8;
-
-    // > div {
-    //   border: 2px solid var(--orange);
-    //   @apply rounded-xl;
-    // }
 
     img {
       .select {
@@ -38,4 +33,27 @@
   h-full w-full
   md:inset-0;
   background-color: var(--bg-light-black);
+
+  // > img {
+  //   @apply sm:rounded-2xl hover:cursor-pointer;
+  //   min-width: 250px;
+  // }
+
+  .product_images {
+    @apply hidden sm:flex justify-around gap-2 md:gap-4 lg:gap-8;
+
+    img {
+      flex: 1;
+
+      .select {
+        opacity: 1;
+      }
+      @apply rounded-xl;
+
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+  }
 }
