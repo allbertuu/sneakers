@@ -44,14 +44,29 @@ header {
     @apply flex items-center md:items-stretch gap-4 md:gap-8;
 
     .cart_icon {
-      @apply hover:cursor-pointer;
+      img {
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
 
     .profile {
       img {
         @apply h-6 md:h-12 md:-mt-4
-        hover:cursor-pointer;
+        hover:cursor-pointer rounded-full;
+
+        &:hover {
+          border: 2px solid var(--orange);
+        }
       }
     }
+  }
+
+  .cart_modal {
+    @apply absolute top-20 right-2 md:top-16 md:right-20
+    bg-white max-w-sm 
+    shadow-2xl rounded-xl;
+    min-width: 360px;
   }
 }
