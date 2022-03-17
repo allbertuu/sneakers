@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Screenshot 📷
 
-![](./screenshot.jpg)
+![Main image of website](./screenshot.jpg)
 
 ### Links 🚀
 
