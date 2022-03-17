@@ -41,14 +41,10 @@ Users should be able to:
 
 ### Links 🚀
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+<!-- - Solution URL: [Add solution URL here](https://your-solution-url.com) -->
+- Live Site URL: [Access here!](https://sneakers-allbertuu.vercel.app/)
 
-## My process ⌨
-
-1. First I started thinking and making the HTML structure of the page, from the top to bottom.  
-2. Therefore I made the header first, separating between navbar and personal information.  
-3. Then I did the main part of the page, separating between product and description. Both are components because I realized they needed to share information between themselves.
+## My process 
 
 ### Built with ⚙
 
