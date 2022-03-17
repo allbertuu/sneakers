@@ -40,8 +40,7 @@
     ]
   },
   "devDependencies": {
-    "json-server": "^0.17.0",
-    "postcss": "^8.4.8"
+    "json-server": "^0.17.0"
   },
   "description": "Ecommerce product page",
   "main": "postcss.config.js",
