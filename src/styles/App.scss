@@ -23,8 +23,7 @@ body {
 }
 
 .page {
-  @apply w-full md:w-4/5 m-auto;
-  height: 100vh;
+  @apply w-full min-h-screen md:w-4/5 m-auto;
 
   main {
     display: flex;

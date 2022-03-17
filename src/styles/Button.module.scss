@@ -1,5 +1,5 @@
 .addToCart, .checkout {
-  height: 50px;
+  min-height: 50px;
 
   @apply flex items-center justify-center gap-4;
 

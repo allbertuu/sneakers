@@ -30,6 +30,7 @@ header {
 
         li {
           color: var(--dark-blue);
+          transition: all 0.2s;
           &:hover {
             border-bottom: 3px solid var(--orange);
             font-weight: 700;
@@ -75,5 +76,68 @@ header {
     bg-white max-w-sm 
     shadow-2xl rounded-xl;
     min-width: 360px;
+  }
+
+  .menuModal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 50;
+    width: 100vw;
+    background-color: var(--bg-light-black);
+
+    aside {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      padding: 2rem;
+      background-color: white;
+      width: 75%;
+      max-width: 250px;
+
+      // menu animations
+      @keyframes Menu {
+        from {
+          margin-left: -400px;
+        }
+        to {
+          margin-left: 0;
+        }
+      }
+
+      &.comeMenu {
+        animation: Menu .6s;
+      }
+
+      img {
+        max-width: 1rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      nav {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+          
+          li {
+            color: var(--dark-blue);
+            transition: all 0.2s;
+            &:hover {
+              border-bottom: 3px solid var(--orange);
+              font-weight: 700;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
   }
 }
