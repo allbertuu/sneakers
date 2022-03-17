@@ -1,6 +1,5 @@
 footer {
-  @apply sm:fixed inset-x-0;
-  bottom: 0;
+  @apply absolute inset-x-0;
   background-color: var(--orange);
 
   .l_footer {
