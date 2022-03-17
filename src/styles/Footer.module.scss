@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 footer {
   @apply absolute inset-x-0;
   background-color: var(--orange);
