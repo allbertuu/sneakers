@@ -18,7 +18,9 @@
 .env.test.local
 .env.production.local
 .vscode
-*.config.js
+
+# backend
+db.json
 
 npm-debug.log*
 yarn-debug.log*
