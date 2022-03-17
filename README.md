@@ -71,11 +71,10 @@ Users should be able to:
 #### JavaScript
 - Creating a modal with pure javascript
 #### React.js
-- Being more used to using components
-- Understanding how React Contexts work
-- Practicing with React Hooks
 - Using map loop for create dynamic elements
 - Using CSS Modules to only style components (without having a CSS Global) 
+- Using React Hook _useToggle_ (very useful)
+- Components with conditional styles
 
 ### Continued development 🎯
 
