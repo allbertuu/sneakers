@@ -79,7 +79,6 @@ Users should be able to:
 ### Continued development 🎯
 
 - Refine my knowledge of create responsive pages
-- Improve the use of the React Contexts
 - Create modals more easily.
 
 ### Useful resources ✨
