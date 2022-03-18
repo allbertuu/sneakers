@@ -6,7 +6,7 @@ import imgAvatar from '../../assets/images/image-avatar.png';
 import navBars from '../../assets/images/icon-menu.svg';
 import iconClose from '../../assets/images/icon-close.svg';
 
-import Button from '../Button';
+import Checkout from '../Checkout';
 
 import styles from '../../styles/Header.module.scss';
 
@@ -53,6 +53,7 @@ function Header() {
         </div>
       </section>
 
+      {/* Modal cart */}
       {isCartOpen &&
         <div id="cartModal" className={styles.cart_modal}>
           <div className="cart_header p-5 border-b border-b-slate-300">
@@ -62,11 +63,12 @@ function Header() {
             <div className="cart_items">
               Item
             </div>
-            <Button type="checkout" />
+            <Checkout />
           </div>
         </div>
       }
 
+      {/* Modal menu */}
       {isMenuOpen &&
         <div className={styles.menuModal}>
           <aside className={styles.comeMenu}>

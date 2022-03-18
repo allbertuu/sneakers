@@ -1,5 +1,5 @@
 import Count from '../Count';
-import Button from '../Button';
+import AddToCart from '../AddToCart';
 
 import styles from '../../styles/Description.module.scss';
 
@@ -21,7 +21,7 @@ function Description() {
       </div>
       <div className={styles.l_buttons}>
         <Count />
-        <Button type="addToCart" />
+        <AddToCart />
       </div>
     </section>
   );

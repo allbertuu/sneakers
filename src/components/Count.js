@@ -40,6 +40,7 @@ function Count() {
         </button>
       </div>
 
+      {/* Modal warning */}
       {isOpen &&
         <div aria-hidden="true" className={styles.l_modal}>
           <div className={styles.modal}>

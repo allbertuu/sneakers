@@ -1,4 +1,4 @@
-.addToCart, .checkout {
+.addToCart {
   min-height: 50px;
 
   @apply flex items-center justify-center gap-4;
@@ -10,10 +10,6 @@
   @apply ring-0 focus:ring-4 focus:ring-orange-300 
   hover:bg-orange-500;
 
-  border-radius: 0.60rem;
-}
-
-.addToCart {
   @apply shadow-xl shadow-orange-400/50;
 
   @media (min-width: 1024px) { //lg
@@ -21,8 +17,6 @@
       flex: 2;
     }
   }
-}
 
-.checkout {
-  flex: 1;
+  border-radius: 0.60rem;
 }
