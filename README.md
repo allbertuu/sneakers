@@ -66,12 +66,14 @@ Users should be able to:
 - Improvement of my thinking logic in building the website structure right at the beginning of the entire building process  
 #### JavaScript
 - Creating a modal with pure javascript
+- Creating a custom adjust price with javascript function
 #### React.js
 - Using map loop for create dynamic elements
 - Using CSS Modules to only style components (without having a CSS Global) 
 - Using React Hook _useToggle_ (very useful)
 - Components with conditional styles
-- Create custom Hooks
+- Creating custom Hooks
+- Fetch API
 
 ### Continued development 🎯
 
