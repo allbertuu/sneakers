@@ -1,26 +1,17 @@
-import { useCallback, useState } from 'react';
+import useToggle from '../../hooks/useToggle';
+
+import Cart from '../Cart';
 
 import logoImg from '../../assets/images/logo.svg';
 import iconCart from '../../assets/images/icon-cart.svg';
 import imgAvatar from '../../assets/images/image-avatar.png';
 import navBars from '../../assets/images/icon-menu.svg';
 import iconClose from '../../assets/images/icon-close.svg';
-
-import Checkout from '../Checkout';
-
 import styles from '../../styles/Header.module.scss';
 
-function Header() {
+function Header({ price }) {
 
   const pages = ['Collections', 'Men', 'Women', 'About', 'Contact'];
-
-  //hook useToggle
-  const useToggle = (initialState = false) => {
-    const [isOpen, setIsOpen] = useState(initialState);
-    const toggle = useCallback(() => setIsOpen(isOpen => !isOpen), []);
-    isOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
-    return [isOpen, toggle]
-  }
 
   const [isCartOpen, setIsCartOpen] = useToggle();
   const [isMenuOpen, setIsMenuOpen] = useToggle();
@@ -55,17 +46,7 @@ function Header() {
 
       {/* Modal cart */}
       {isCartOpen &&
-        <div id="cartModal" className={styles.cart_modal}>
-          <div className="cart_header p-5 border-b border-b-slate-300">
-            <b>Cart</b>
-          </div>
-          <div className="cart_body flex flex-col gap-5 p-5">
-            <div className="cart_items">
-              Item
-            </div>
-            <Checkout />
-          </div>
-        </div>
+        <Cart price={price}/>
       }
 
       {/* Modal menu */}

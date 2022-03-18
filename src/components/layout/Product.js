@@ -1,4 +1,5 @@
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
+import useToggle from '../../hooks/useToggle';
 
 import img1_small from '../../assets/images/image-product-1-thumbnail.jpg';
 import img1 from '../../assets/images/image-product-1.jpg';
@@ -22,12 +23,6 @@ function Product() {
     // aplicar estilos de selecionado à imagem menor que foi selecionada
   }
 
-  //hook useToggle
-  const useToggle = (initialState = false) => {
-    const [isOpen, setIsOpen] = useState(initialState);
-    const toggle = useCallback(() => setIsOpen(isOpen => !isOpen), []);
-    return [isOpen, toggle]
-  }
   const [isOpen, setIsOpen] = useToggle();
 
   return (

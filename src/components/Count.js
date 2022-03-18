@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import useToggle from "../hooks/useToggle";
 
 import iconMinus from "../assets/images/icon-minus.svg";
 import iconPlus from "../assets/images/icon-plus.svg";
@@ -6,9 +6,7 @@ import btnClose from "../assets/images/close-modal.svg";
 
 import styles from '../styles/Count.module.scss';
 
-function Count() {
-
-  const [count, setCount] = useState(0);
+function Count({ count, setCount}) {
 
   function less(e) {
     if (count > 0) {
@@ -19,13 +17,6 @@ function Count() {
     }
   }
 
-  //hook useToggle
-  const useToggle = (initialState = false) => {
-    const [isOpen, setIsOpen] = useState(initialState);
-    const toggle = useCallback(() => setIsOpen(isOpen => !isOpen), []);
-    isOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
-    return [isOpen, toggle]
-  }
   const [isOpen, setIsOpen] = useToggle();
 
   return (
