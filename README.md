@@ -71,6 +71,7 @@ Users should be able to:
 - Using CSS Modules to only style components (without having a CSS Global) 
 - Using React Hook _useToggle_ (very useful)
 - Components with conditional styles
+- Create custom Hooks
 
 ### Continued development 🎯
 
