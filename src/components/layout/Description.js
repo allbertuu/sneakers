@@ -19,7 +19,7 @@ function Description({ price }) {
       </p>
       <div className={styles.l_price}>
         <div className={styles.with_discount}>
-          <p>&#36;{price}.00</p>
+          <p>&#36;{price}</p>
           <div className={styles.discount}>50%</div>
         </div>
         <p className={styles.no_discount}>&#36;250.00</p>

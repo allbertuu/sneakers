@@ -1,3 +1,5 @@
+import adjustPrice from './assets/scripts/adjustPrice';
+
 import Header from './components/layout/Header';
 import Product from './components/layout/Product';
 import Description from './components/layout/Description'
@@ -7,7 +9,7 @@ import './styles/App.scss';
 
 function App() {
 
-  const price = 125;
+  const price = adjustPrice(125.00);
 
   return (
     <div className="page">

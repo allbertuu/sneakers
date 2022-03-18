@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import adjustPrice from '../assets/scripts/adjustPrice';
 
 import mainImg from '../assets/images/image-product-1-thumbnail.jpg';
 import Checkout from './Checkout';
@@ -36,7 +37,7 @@ function Cart({ price }) {
                 <img src={mainImg} alt="Produto" />
                 <div className={styles.info}>
                   <div>{product.name}</div>
-                  <div>&#36;{price}.00 x {product.count} <b className="text-black">&#36;{price * product.count}.00</b></div>
+                  <div>&#36;{price} x {product.count} <b className="text-black">&#36;{adjustPrice(price * product.count)}</b></div>
                 </div>
               </li>
             ))
