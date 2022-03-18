@@ -6,12 +6,15 @@ import Footer from './components/layout/Footer';
 import './styles/App.scss';
 
 function App() {
+
+  const price = 125;
+
   return (
     <div className="page">
-      <Header />
+      <Header price={price} />
       <main>
         <Product />
-        <Description />
+        <Description price={price}/>
       </main>
       <Footer />
     </div>
