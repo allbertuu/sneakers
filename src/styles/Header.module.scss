@@ -71,13 +71,6 @@ header {
     }
   }
 
-  .cart_modal {
-    @apply absolute top-20 right-2 md:top-16 md:right-20
-    bg-white max-w-sm 
-    shadow-2xl rounded-xl;
-    min-width: 360px;
-  }
-
   .menuModal {
     position: fixed;
     left: 0;

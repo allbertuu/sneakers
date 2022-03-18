@@ -1,0 +1,37 @@
+.cartModal {
+  @apply absolute top-20 right-2 md:top-16 md:right-20
+    bg-white max-w-sm 
+    shadow-2xl rounded-xl;
+  min-width: 360px;
+
+  .cart_header {
+  }
+
+  .cart_body {
+    @apply flex flex-col gap-5 p-5;
+
+    .cart_items {
+      @apply flex flex-col gap-5;
+
+      .item {
+        color: var(--dark-gray-blue);
+        @apply flex gap-4;
+
+        .id {
+          flex: 1;
+        }
+
+        img {
+          max-width: 50px;
+          max-height: 50px;
+          border-radius: 0.3rem;
+        }
+
+        .info {
+          @apply flex flex-col justify-between;
+          flex: 18;
+        }
+      }
+    }
+  }
+}
