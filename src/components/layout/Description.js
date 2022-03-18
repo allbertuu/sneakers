@@ -1,9 +1,14 @@
+import { useState } from 'react';
+
 import Count from '../Count';
 import AddToCart from '../AddToCart';
 
 import styles from '../../styles/Description.module.scss';
 
-function Description() {
+function Description({ price }) {
+
+  const [count, setCount] = useState(0);
+
   return (
     <section className={styles.l_description}>
       <p className={styles.brand}>SNEAKERS COMPANY</p>
@@ -14,13 +19,13 @@ function Description() {
       </p>
       <div className={styles.l_price}>
         <div className={styles.with_discount}>
-          <p>125.00</p>
+          <p>&#36;{price}.00</p>
           <div className={styles.discount}>50%</div>
         </div>
-        <p className={styles.no_discount}>250.00</p>
+        <p className={styles.no_discount}>&#36;250.00</p>
       </div>
       <div className={styles.l_buttons}>
-        <Count />
+        <Count count={count} setCount={setCount} />
         <AddToCart />
       </div>
     </section>
