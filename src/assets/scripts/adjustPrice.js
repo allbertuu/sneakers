@@ -39,7 +39,7 @@ function adjustPrice(price = 1) {
   if(floatPart === undefined) {
     floatPart = '00';
   }
-  // parte decimal é um número (pode ser grande ou pequeno)
+  // parte decimal é um número (pode ser grande ou um só)
   else {
     if(floatPart.length === 1) {
       floatPart += '0';
