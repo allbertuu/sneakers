@@ -58,6 +58,10 @@ Users should be able to:
 
 ### What I learned 📚
 
+> **General development**: 
+>- CRUD
+>- Fetch API
+
 #### CSS
 - Using the order property - flexbox  
 - More knowledge about building responsive websites
@@ -74,7 +78,6 @@ Users should be able to:
 - Components with conditional styles
 - Creating custom Hooks
 - Using React Context
-- Fetch API
 
 ### Continued development 🎯
 
