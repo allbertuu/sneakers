@@ -6,18 +6,18 @@ import btnClose from "../assets/images/close-modal.svg";
 
 import styles from '../styles/Count.module.scss';
 
-function Count({ count, setCount}) {
+function Count({ count, setCount }) {
 
   function less(e) {
     if (count > 0) {
       setCount(count - 1);
     }
     else if (count === 0) {
-      setIsOpen();
+      toggle();
     }
   }
 
-  const [isOpen, setIsOpen] = useToggle();
+  const [isOpen, toggle] = useToggle();
 
   return (
     <>
@@ -40,7 +40,7 @@ function Count({ count, setCount}) {
                 <h3>
                   Oops!
                 </h3>
-                <button type="button" onClick={(e) => setIsOpen()}>
+                <button type="button" onClick={(e) => toggle()}>
                   <img src={btnClose} alt="Fechar modal" />
                 </button>
               </div>
@@ -50,7 +50,7 @@ function Count({ count, setCount}) {
                 </p>
               </div>
               <div className={styles.modal_footer}>
-                <button onClick={(e) => setIsOpen()} type="button" className={styles.agree}>Ok</button>
+                <button onClick={(e) => toggle()} type="button" className={styles.agree}>Ok</button>
               </div>
             </div>
           </div>

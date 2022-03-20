@@ -13,8 +13,8 @@ function Header({ price }) {
 
   const pages = ['Collections', 'Men', 'Women', 'About', 'Contact'];
 
-  const [isCartOpen, setIsCartOpen] = useToggle();
-  const [isMenuOpen, setIsMenuOpen] = useToggle();
+  const [isCartOpen, toggleCart] = useToggle();
+  const [isMenuOpen, toggleMenu] = useToggle();
 
   return (
     <header>
@@ -25,7 +25,7 @@ function Header({ price }) {
           </a>
         </div>
         <nav>
-          <button className={styles.bars_icon} onClick={(e) => setIsMenuOpen()}>
+          <button className={styles.bars_icon} onClick={(e) => toggleMenu()}>
             <img src={navBars} alt="Barra de navegação" />
           </button>
           <ul>
@@ -37,10 +37,10 @@ function Header({ price }) {
       </section>
       <section className={styles.personal}>
         <div className={styles.cart_icon}>
-          <img src={iconCart} alt="Cart" onClick={(e) => setIsCartOpen()} />
+          <img src={iconCart} alt="Cart" onClick={(e) => toggleCart()} />
         </div>
         <div className={isCartOpen ? styles.profile_active : styles.profile}>
-          <img src={imgAvatar} alt="Avatar" onClick={(e) => setIsCartOpen()} />
+          <img src={imgAvatar} alt="Avatar" onClick={(e) => toggleCart()} />
         </div>
       </section>
 
@@ -53,7 +53,7 @@ function Header({ price }) {
       {isMenuOpen &&
         <div className={styles.menuModal}>
           <aside className={styles.comeMenu}>
-            <img src={iconClose} onClick={(e) => setIsMenuOpen()} alt='Close menu' />
+            <img src={iconClose} onClick={(e) => toggleMenu()} alt='Close menu' />
             <nav>
               <ul>
                 {pages.map((page, key) => (

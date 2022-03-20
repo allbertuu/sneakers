@@ -18,28 +18,28 @@ function Product() {
 
   const [mainImg, setMainImg] = useState(img1);
 
-  function changeImg(img) {
+  function handleImg(img) {
     setMainImg(img);
     // aplicar estilos de selecionado à imagem menor que foi selecionada
   }
 
-  const [isOpen, setIsOpen] = useToggle();
+  const [isOpen, toggle] = useToggle();
 
   return (
     <>
       <section className={styles.l_product}>
-        <img src={mainImg} alt="Main product" onClick={(e) => setIsOpen()} />
+        <img src={mainImg} alt="Main product" onClick={(e) => toggle()} />
         <div className={styles.product_images}>
-          <div onClick={(e) => changeImg(img1)}>
+          <div onClick={(e) => handleImg(img1)}>
             <img src={img1_small} alt="Product" />
           </div>
-          <div onClick={(e) => changeImg(img2)}>
+          <div onClick={(e) => handleImg(img2)}>
             <img src={img2_small} alt="Product" />
           </div>
-          <div onClick={(e) => changeImg(img3)}>
+          <div onClick={(e) => handleImg(img3)}>
             <img src={img3_small} alt="Product" />
           </div>
-          <div onClick={(e) => changeImg(img4)}>
+          <div onClick={(e) => handleImg(img4)}>
             <img src={img4_small} alt="Product" />
           </div>
         </div>
@@ -48,7 +48,7 @@ function Product() {
       {isOpen &&
         <div aria-hidden="true" className={styles.l_modal}>
           <section className={styles.l_product}>
-            <button className="lg:-mb-4 text-right" onClick={(e) => setIsOpen()}>
+            <button className="lg:-mb-4 text-right" onClick={(e) => toggle()}>
               <img src={iconClose} className="inline-block w-6" alt='Button close' />
             </button>
             <div className="flex">
@@ -57,16 +57,16 @@ function Product() {
               {/* <button className="absolute right-1/3">X</button> */}
             </div>
             <div className={styles.product_images}>
-              <div onClick={(e) => changeImg(img1)}>
+              <div onClick={(e) => handleImg(img1)}>
                 <img src={img1_small} alt="Product" />
               </div>
-              <div onClick={(e) => changeImg(img2)}>
+              <div onClick={(e) => handleImg(img2)}>
                 <img src={img2_small} alt="Product" />
               </div>
-              <div onClick={(e) => changeImg(img3)}>
+              <div onClick={(e) => handleImg(img3)}>
                 <img src={img3_small} alt="Product" />
               </div>
-              <div onClick={(e) => changeImg(img4)}>
+              <div onClick={(e) => handleImg(img4)}>
                 <img src={img4_small} alt="Product" />
               </div>
             </div>
