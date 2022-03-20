@@ -69,16 +69,17 @@ Users should be able to:
 - Creating a custom adjust price with javascript function
 #### React.js
 - Using map loop for create dynamic elements
-- Using CSS Modules to only style components (without having a CSS Global) 
+- Using CSS Modules to style individual components (without having a CSS Global) 
 - Using React Hook _useToggle_ (very useful)
 - Components with conditional styles
 - Creating custom Hooks
+- Using React Context
 - Fetch API
 
 ### Continued development 🎯
 
 - Refine my knowledge of create responsive pages
-- Create modals more easily.
+- Create modals more easily, elegant and smooth.
 
 ### Useful resources ✨
 
