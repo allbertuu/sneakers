@@ -4,12 +4,15 @@ import iconCart from '../assets/images/icon-cart-white.svg';
 
 import styles from '../styles/AddToCart.module.scss';
 
-function AddToCart({count}) {
+function AddToCart({count, setCount}) {
 
   const { products } = useProducts()
 
   function createNewProduct() {
     products.push({name: "Fall Limited Edition Sneakers", count: count});
+    // se o produto tem o mesmo nome, altera somente a contagem do mesmo
+    setCount(0);
+    // um modal de adicionado com sucesso
   }
 
   return (
