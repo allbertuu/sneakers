@@ -26,7 +26,7 @@ function Description({ price }) {
       </div>
       <div className={styles.l_buttons}>
         <Count count={count} setCount={setCount} />
-        <AddToCart />
+        <AddToCart count={count} />
       </div>
     </section>
   );
