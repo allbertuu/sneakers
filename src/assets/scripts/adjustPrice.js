@@ -51,7 +51,6 @@ function adjustPrice(price = 1) {
 
   let adjustedPrice = integerPart + '.' + floatPart;
 
-  console.log(`Parte inteira: ${integerPart} | Parte decimal: ${floatPart}`)
   return adjustedPrice;
 }
 
