@@ -9,6 +9,9 @@ function AddToCart({count, setCount}) {
   const { products } = useProducts()
 
   function createNewProduct() {
+    if (count === 0) {
+      return;
+    }
     products.push({name: "Fall Limited Edition Sneakers", count: count});
     // se o produto tem o mesmo nome, altera somente a contagem do mesmo
     setCount(0);
