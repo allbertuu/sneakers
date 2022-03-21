@@ -1,6 +1,7 @@
 footer {
   @apply absolute inset-x-0;
   background-color: var(--orange);
+  user-select: none;
 
   .l_footer {
     @apply flex justify-center
