@@ -37,10 +37,10 @@ function Header({ price }) {
       </section>
       <section className={styles.personal}>
         <div className={styles.cart_icon}>
-          <img src={iconCart} alt="Cart" onClick={(e) => toggleCart()} />
+          <img src={iconCart} alt="Cart" onFocus={(e) => toggleCart()} />
         </div>
         <div className={isCartOpen ? styles.profile_active : styles.profile}>
-          <img src={imgAvatar} alt="Avatar" onClick={(e) => toggleCart()} />
+          <img src={imgAvatar} alt="Avatar" onFocus={(e) => toggleCart()} />
         </div>
       </section>
 
