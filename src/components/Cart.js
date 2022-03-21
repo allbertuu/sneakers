@@ -36,7 +36,10 @@ function Cart({ price }) {
       </div>
       <div className={styles.cart_body}>
         <ol className={styles.cart_items}>
-          {
+          {products.length === 0 &&
+            <p className={styles.withoutItems}>Your cart is empty</p>
+          }
+          {products.length > 0 &&
             products.map((product, key) => (
               <li className={styles.item} key={generateId()}>
                 <div className={styles.id}>{key + 1}</div>
@@ -49,7 +52,9 @@ function Cart({ price }) {
             ))
           }
         </ol>
-        <Checkout />
+        {products.length > 0 && 
+          <Checkout />
+        }
       </div>
     </div>
   );
