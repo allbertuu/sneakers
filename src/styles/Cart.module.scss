@@ -13,6 +13,12 @@
     .cart_items {
       @apply flex flex-col gap-5;
 
+      .withoutItems {
+        @apply text-center py-12;
+        font-weight: 700;
+        color: var(--dark-gray-blue);
+      }
+
       .item {
         color: var(--dark-gray-blue);
         @apply flex gap-4;
