@@ -8,7 +8,7 @@ function AddToCart({count, setCount}) {
 
   const { products } = useProducts()
 
-  function createNewProduct() {
+  function addToCart() {
     if (count === 0) {
       return;
     }
@@ -19,7 +19,7 @@ function AddToCart({count, setCount}) {
   }
 
   return (
-    <button className={styles.addToCart} onClick={(e) => createNewProduct()}>
+    <button className={styles.addToCart} onClick={(e) => addToCart()}>
       <img src={iconCart} alt='Cart' />
       Add to cart
     </button>
