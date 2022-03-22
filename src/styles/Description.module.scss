@@ -48,6 +48,7 @@
     }
   }
   .l_buttons {
+    user-select: none;
     display: flex;
     gap: 1rem;
     font-weight: 700;
