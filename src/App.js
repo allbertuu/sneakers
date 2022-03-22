@@ -5,7 +5,7 @@ import Product from './components/layout/Product';
 import Description from './components/layout/Description'
 import Footer from './components/layout/Footer';
 
-import {ProductsContextProvider} from './contexts/Products';
+import { ProductsContextProvider } from './contexts/Products';
 
 import './styles/App.scss';
 
@@ -15,12 +15,14 @@ function App() {
 
   return (
     <ProductsContextProvider>
-      <div className="page">
-        <Header price={price} />
-        <main>
-          <Product />
-          <Description price={price} />
-        </main>
+      <div className="container">
+        <div className="h-screen">
+          <Header price={price} />
+          <main>
+            <Product />
+            <Description price={price} />
+          </main>
+        </div>
         <Footer />
       </div>
     </ProductsContextProvider>
