@@ -57,7 +57,7 @@ function Header({ price }) {
 
       {/* Modal cart */}
       {isCartOpen &&
-        <Cart price={price} deleteProduct={deleteProduct}/>
+        <Cart price={price} deleteProduct={deleteProduct} toggleCart={toggleCart}/>
       }
 
       {/* Modal menu */}

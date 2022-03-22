@@ -7,7 +7,7 @@ import Checkout from './Checkout';
 
 import styles from '../styles/Cart.module.scss';
 
-function Cart({ price, deleteProduct }) {
+function Cart({ price, deleteProduct, toggleCart }) {
 
   const { products } = useProducts();
 
@@ -16,7 +16,7 @@ function Cart({ price, deleteProduct }) {
   }
 
   return (
-    <div className={styles.cartModal}>
+    <div className={styles.cartModal} onMouseLeave={(e) => toggleCart()}>
       <div className={styles.cart_header}>
         <b>Cart</b>
       </div>
