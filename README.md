@@ -100,4 +100,4 @@ I'm so thankful for [Iuri Silva](https://github.com/iuricode), that helped me a 
 Thank to [SatellaSoft](https://www.youtube.com/watch?v=NXdjf6GJSKo&ab_channel=SatellaSoft) and your channel on YouTube, where I learned how to create a modal with only pure javascript. 
 
 
-[Back to the 🔝](#frontend-mentor---e-commerce-product-page-solution)
+[Back to the 🔝](#e-commerce-product-page-solution-)
