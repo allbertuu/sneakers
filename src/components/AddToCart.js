@@ -8,22 +8,22 @@ function AddToCart({count, setCount}) {
 
   const { products } = useProducts();
 
-  function addToCart(productToAdd) {
+  function addToCart(productToAdd = '') {
+    // don't add nonexistent product
     if (count === 0) {
       return;
     }
-    
+    // update existent product (if have)
     let productToUpdate = products.findIndex((product) => {
       return product.name === productToAdd;
     });
     if (productToUpdate === -1) {
-      products.push({name: "Fall Limited Edition Sneakers", count: count});
+      products.push({name: productToAdd, count: count});
     }
     else {
-      products[productToUpdate].count = count;
+      products[productToUpdate].count += count;
     }
 
-    // se o produto tem o mesmo nome, altera somente a contagem do mesmo
     setCount(0);
     // um modal de adicionado com sucesso
   }
