@@ -2,32 +2,18 @@ import { useProducts } from '../hooks/useProducts';
 import adjustPrice from '../assets/scripts/adjustPrice';
 
 import mainImg from '../assets/images/image-product-1-thumbnail.jpg';
+import removeIcon from '../assets/images/icon-delete.svg';
 import Checkout from './Checkout';
 
 import styles from '../styles/Cart.module.scss';
 
-function Cart({ price }) {
+function Cart({ price, deleteProduct }) {
 
   const { products } = useProducts();
 
   function generateId() {
     return Math.floor(Math.random() * 10000);
   }
-
-  // const [products, setProducts] = useState([]);
-
-  // // fetch backend products added
-  // useEffect(() => {
-  //   fetch('http://localhost:5000/products', {
-  //     method: 'GET',
-  //     headers: {
-  //       'Content-type': 'application/json',
-  //     },
-  //   })
-  //     .then(res => res.json())
-  //     .then(json => setProducts(json))
-  //     .catch((err) => console.log(err))
-  // }, []);
 
   return (
     <div className={styles.cartModal}>
@@ -48,6 +34,7 @@ function Cart({ price }) {
                   <div>{product.name}</div>
                   <div>&#36;{price} x {product.count} <b className="text-black">&#36;{adjustPrice(price * product.count)}</b></div>
                 </div>
+                <img src={removeIcon} alt="Remove product" className="self-center cursor-pointer" onClick={(e) => deleteProduct(product.name)} />
               </li>
             ))
           }

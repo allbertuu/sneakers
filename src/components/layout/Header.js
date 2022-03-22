@@ -1,4 +1,5 @@
 import useToggle from '../../hooks/useToggle';
+import { useProducts } from '../../hooks/useProducts';
 
 import Cart from '../Cart';
 
@@ -15,6 +16,16 @@ function Header({ price }) {
 
   const [isCartOpen, toggleCart] = useToggle();
   const [isMenuOpen, toggleMenu] = useToggle();
+
+  const { products } = useProducts();
+  
+  function deleteProduct(productName = '') {
+    let productToDelete = products.findIndex((product) => {
+      return product.name === productName;
+    });
+    products.splice(productToDelete, 1);
+    toggleCart();
+  }
 
   return (
     <header>
@@ -46,7 +57,7 @@ function Header({ price }) {
 
       {/* Modal cart */}
       {isCartOpen &&
-        <Cart price={price}/>
+        <Cart price={price} deleteProduct={deleteProduct}/>
       }
 
       {/* Modal menu */}
