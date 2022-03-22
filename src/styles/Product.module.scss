@@ -2,6 +2,7 @@
   @apply flex flex-col flex-1 gap-2 md:gap-4 lg:gap-8 
   pb-4 sm:pb-0
   sm:max-w-lg;
+  user-select: none;
 
   > img {
     @apply sm:rounded-2xl hover:cursor-pointer;
