@@ -16,7 +16,7 @@ function App() {
   return (
     <ProductsContextProvider>
       <div className="container">
-        <div className="h-screen">
+        <div className="sm:h-screen">
           <Header price={price} />
           <main>
             <Product />
