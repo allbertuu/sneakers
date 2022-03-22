@@ -5,6 +5,7 @@
   min-width: 360px;
 
   .cart_header {
+    @apply p-5 border-b border-b-slate-300;
   }
 
   .cart_body {

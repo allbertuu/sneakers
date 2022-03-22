@@ -31,7 +31,7 @@ function Cart({ price }) {
 
   return (
     <div className={styles.cartModal}>
-      <div className="cart_header p-5 border-b border-b-slate-300">
+      <div className={styles.cart_header}>
         <b>Cart</b>
       </div>
       <div className={styles.cart_body}>

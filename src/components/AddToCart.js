@@ -23,7 +23,7 @@ function AddToCart({count, setCount}) {
     else {
       products[productToUpdate].count += count;
     }
-
+    // reset count
     setCount(0);
     // um modal de adicionado com sucesso
   }
