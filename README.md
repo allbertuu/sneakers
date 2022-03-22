@@ -87,6 +87,7 @@ Users should be able to:
 ### Useful resources ✨
 
 - [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb?hl=en) - This helped me to viewing my page on different screens at once. I really liked this extension and I think you too.
+- I liked so much [this post](https://dev.to/gitanshu_choudhary/crud-operations-in-modern-javascript-379e) about CRUD operations and the logic around it. It helped me to understanding more and better about that subject.
 
 ## Author 🙎🏻‍♂️
 
