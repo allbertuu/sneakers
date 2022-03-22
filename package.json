@@ -16,7 +16,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "backend": "json-server --watch db.json --port 5000",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -39,9 +38,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "json-server": "^0.17.0"
-  },
+  "devDependencies": {},
   "description": "Ecommerce product page",
   "main": "postcss.config.js",
   "keywords": [
