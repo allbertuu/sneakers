@@ -26,7 +26,7 @@
     padding-bottom: 2rem;
 
     .with_discount {
-      @apply flex items-center gap-4;
+      @apply flex items-center gap-2 sm:gap-4;
 
       p {
         @apply text-2xl;
