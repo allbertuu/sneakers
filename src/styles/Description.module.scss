@@ -22,11 +22,11 @@
   }
   .l_price {
     @apply font-bold
-    flex flex-col gap-1;
+    flex justify-between sm:flex-col gap-1;
     padding-bottom: 2rem;
 
     .with_discount {
-      @apply flex items-center gap-4;
+      @apply flex items-center gap-2 sm:gap-4;
 
       p {
         @apply text-2xl;
@@ -44,7 +44,7 @@
     .no_discount {
       color: var(--gray-blue);
       text-decoration: line-through;
-      @apply text-base;
+      @apply text-base flex items-center;
     }
   }
   .l_buttons {
