@@ -16,13 +16,11 @@ function App() {
   return (
     <ProductsContextProvider>
       <div className="container">
-        <div className="sm:h-screen">
-          <Header price={price} />
-          <main>
-            <Product />
-            <Description price={price} />
-          </main>
-        </div>
+        <Header price={price} />
+        <main>
+          <Product />
+          <Description price={price} />
+        </main>
         <Footer />
       </div>
     </ProductsContextProvider>
