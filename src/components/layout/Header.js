@@ -18,7 +18,7 @@ function Header({ price }) {
   const [isMenuOpen, toggleMenu] = useToggle();
 
   const { products } = useProducts();
-  
+
   function deleteProduct(productName = '') {
     let productToDelete = products.findIndex((product) => {
       return product.name === productName;
@@ -57,7 +57,7 @@ function Header({ price }) {
 
       {/* Modal cart */}
       {isCartOpen &&
-        <Cart price={price} deleteProduct={deleteProduct} toggleCart={toggleCart}/>
+        <Cart price={price} deleteProduct={deleteProduct} toggleCart={toggleCart} />
       }
 
       {/* Modal menu */}

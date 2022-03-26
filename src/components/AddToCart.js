@@ -9,11 +9,12 @@ function AddToCart({count, setCount}) {
   const { products } = useProducts();
 
   function addToCart(productToAdd = '') {
+
     // don't add nonexistent product
     if (count === 0) {
       return;
     }
-    // update existent product (if have)
+    // update existent product (if have), if not: changes only the count
     let productToUpdate = products.findIndex((product) => {
       return product.name === productToAdd;
     });
