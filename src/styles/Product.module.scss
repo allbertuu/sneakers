@@ -13,9 +13,11 @@
     @apply hidden sm:flex gap-2 md:gap-4 lg:gap-8;
 
     img {
-      .select {
-        opacity: 1;
+      &.selected {
+        opacity: 0.5;
+        border: 2px solid var(--orange);
       }
+
       @apply rounded-xl;
 
       &:hover {
@@ -49,10 +51,7 @@
   
       img {
         flex: 1;
-  
-        .select {
-          opacity: 1;
-        }
+
         @apply rounded-xl;
   
         &:hover {

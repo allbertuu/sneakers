@@ -31,16 +31,16 @@ function Product() {
         <img src={mainImg} alt="Main product" onClick={(e) => toggle()} />
         <div className={styles.product_images}>
           <div onClick={(e) => handleImg(img1)}>
-            <img src={img1_small} alt="Product" />
+            <img src={img1_small} alt="Product" className={img1 === mainImg ? styles.selected : false} />
           </div>
           <div onClick={(e) => handleImg(img2)}>
-            <img src={img2_small} alt="Product" />
+            <img src={img2_small} alt="Product" className={img2 === mainImg ? styles.selected : false} />
           </div>
           <div onClick={(e) => handleImg(img3)}>
-            <img src={img3_small} alt="Product" />
+            <img src={img3_small} alt="Product" className={img3 === mainImg ? styles.selected : false} />
           </div>
           <div onClick={(e) => handleImg(img4)}>
-            <img src={img4_small} alt="Product" />
+            <img src={img4_small} alt="Product" className={img4 === mainImg ? styles.selected : false} />
           </div>
         </div>
       </section>
