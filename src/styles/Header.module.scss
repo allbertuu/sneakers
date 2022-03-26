@@ -31,7 +31,7 @@ header {
 
         li {
           color: var(--dark-blue);
-          transition: all 0.2s;
+          transition: all 0.3s;
           &:hover {
             border-bottom: 3px solid var(--orange);
             font-weight: 700;
@@ -57,14 +57,17 @@ header {
       img {
         @apply h-6 md:h-12 md:-mt-4
         hover:cursor-pointer rounded-full;
+        transition: all ease 0.2s;
 
         &:hover {
+          transform: scale(1.1);
           border: 2px solid var(--orange);
         }
       }
     }
     .profile_active {
       img {
+        transform: scale(1.1);
         @apply h-6 md:h-12 md:-mt-4
         hover:cursor-pointer rounded-full;
         border: 2px solid var(--orange);

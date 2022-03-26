@@ -29,7 +29,8 @@
 }
 
 .l_modal {
-  @apply overflow-hidden 
+  @apply hidden sm:block
+  overflow-hidden 
   fixed right-0 left-0 top-0 z-50
   justify-center items-center
   h-full w-full
