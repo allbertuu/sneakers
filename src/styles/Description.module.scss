@@ -8,6 +8,7 @@
     letter-spacing: 2px;
     font-weight: 700;
     font-size: small;
+    user-select: none;
   }
   .title {
     font-weight: 700;
@@ -24,6 +25,7 @@
     @apply font-bold
     flex justify-between sm:flex-col gap-1;
     padding-bottom: 2rem;
+    user-select: none;
 
     .with_discount {
       @apply flex items-center gap-2 sm:gap-4;
