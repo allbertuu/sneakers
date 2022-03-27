@@ -13,6 +13,7 @@ function Count({ count, setCount }) {
       setCount(count - 1);
     }
     else if (count === 0) {
+      document.body.style.overflow = 'hidden';
       toggle();
     }
   }
