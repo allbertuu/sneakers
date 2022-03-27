@@ -57,6 +57,7 @@
   .modal {
     @apply relative px-4 max-w-2xl h-full md:h-auto 
     m-auto md:mt-20;
+    animation: 0.5s slidein;
 
     .modal_content {
       @apply relative bg-white rounded-lg shadow dark:bg-gray-700;
