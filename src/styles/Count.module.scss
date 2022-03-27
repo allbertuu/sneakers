@@ -1,3 +1,13 @@
+// keyframes
+@keyframes slidein {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 .count {
   height: 50px;
   border-radius: 0.6rem;

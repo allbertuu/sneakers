@@ -1,3 +1,13 @@
+// keyframes
+@keyframes slidein {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 .l_product {
   @apply flex flex-col flex-1 gap-2 md:gap-4 lg:gap-8 
   pb-4 sm:pb-0
@@ -38,23 +48,24 @@
   background-color: var(--bg-light-black);
 
   .l_product {
+    animation: 1s slidein;
     @apply flex flex-col justify-center h-screen flex-1 gap-2 md:gap-4 lg:gap-8 
     pb-4 sm:pb-0
     sm:max-w-lg mx-auto;
-  
+
     > img {
       @apply sm:rounded-2xl hover:cursor-pointer;
       min-width: 250px;
     }
-  
+
     .product_images {
       @apply hidden sm:flex justify-around gap-2 md:gap-4 lg:gap-8;
-  
+
       img {
         flex: 1;
 
         @apply rounded-xl;
-  
+
         &:hover {
           opacity: 0.5;
           cursor: pointer;

@@ -66,6 +66,7 @@ Users should be able to:
 - Using the order property - flexbox  
 - More knowledge about building responsive websites
 - Changing the color of elements that has been highlighted by the user
+- Elegant animations of elements
 #### HTML
 - Improvement of my thinking logic in building the website structure right at the beginning of the entire building process  
 #### JavaScript

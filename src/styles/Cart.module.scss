@@ -1,8 +1,20 @@
+// keyframes
+@keyframes slidein {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 .cartModal {
   @apply absolute top-20 right-2 md:top-16 md:right-20
-    bg-white sm:w-96
-    shadow-2xl rounded-xl;
-    min-width: 300px;
+bg-white max-w-xs md:max-w-lg
+  text-sm sm:text-base
+  shadow-2xl rounded-xl;
+  min-width: 300px;
+  animation: 0.5s slidein;
 
   .cart_header {
     @apply p-5 border-b border-b-slate-300;
