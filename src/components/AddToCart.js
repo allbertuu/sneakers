@@ -8,18 +8,17 @@ function AddToCart({count, setCount}) {
 
   const { products } = useProducts();
 
-  function addToCart(productToAdd = '') {
-
+  function addToCart(productToAdd = 'Product') {
     // don't add nonexistent product
     if (count === 0) {
       return;
     }
-    // update existent product (if have), if not: changes only the count
+    // update existent product (if have), if not: add new
     let productToUpdate = products.findIndex((product) => {
       return product.name === productToAdd;
     });
     if (productToUpdate === -1) {
-      products.push({name: productToAdd, count: count});
+      products.push({name: productToAdd, count: count})
     }
     else {
       products[productToUpdate].count += count;
