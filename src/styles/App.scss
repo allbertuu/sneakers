@@ -37,7 +37,7 @@ body {
 
   main {
     display: flex;
-    @apply flex-col sm:flex-row sm:justify-center gap-4 md:gap-12 lg:gap-20
+    @apply flex-col sm:flex-row sm:justify-center gap-4 sm:gap-8 md:gap-12 xl:gap-32
     sm:px-10 sm:py-16;
   }
 }

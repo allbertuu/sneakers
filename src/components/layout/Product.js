@@ -25,49 +25,58 @@ function Product() {
 
   const [isOpen, toggle] = useToggle();
 
+  function setSelected(img) {
+    if (img === mainImg) {
+      return styles.selected;
+    }
+    else {
+      return undefined;
+    }
+  }
+
   return (
     <>
-      <section className={styles.l_product}>
-        <img src={mainImg} alt="Main product" onClick={(e) => toggle()} />
-        <div className={styles.product_images}>
+      <section className={styles.container}>
+        <img className={styles.main_img} src={mainImg} alt="Main product" onClick={(e) => toggle()} />
+        <div className={styles.l_product_images}>
           <div onClick={(e) => handleImg(img1)}>
-            <img src={img1_small} alt="Product" className={img1 === mainImg ? styles.selected : false} />
+            <img src={img1_small} alt="Product" className={setSelected(img1)} />
           </div>
           <div onClick={(e) => handleImg(img2)}>
-            <img src={img2_small} alt="Product" className={img2 === mainImg ? styles.selected : false} />
+            <img src={img2_small} alt="Product" className={setSelected(img2)} />
           </div>
           <div onClick={(e) => handleImg(img3)}>
-            <img src={img3_small} alt="Product" className={img3 === mainImg ? styles.selected : false} />
+            <img src={img3_small} alt="Product" className={setSelected(img3)} />
           </div>
           <div onClick={(e) => handleImg(img4)}>
-            <img src={img4_small} alt="Product" className={img4 === mainImg ? styles.selected : false} />
+            <img src={img4_small} alt="Product" className={setSelected(img4)} />
           </div>
         </div>
       </section>
 
       {isOpen &&
         <div aria-hidden="true" className={styles.l_modal}>
-          <section className={styles.l_product}>
+          <section className={styles.container_modal}>
             <button className="lg:-mb-4 text-right" onClick={(e) => toggle()}>
-              <img src={iconClose} className="inline-block w-6" alt='Button close' />
+              <img src={iconClose} className="inline-block w-6" alt='Close' />
             </button>
             <div className="flex">
               {/* <button className="absolute">X</button> */}
-              <img src={mainImg} alt="Main product" className='sm:rounded-2xl' />
+              <img className={styles.main_img} src={mainImg} alt="Main product" />
               {/* <button className="absolute right-1/3">X</button> */}
             </div>
-            <div className={styles.product_images}>
+            <div className={styles.l_product_images_modal}>
               <div onClick={(e) => handleImg(img1)}>
-                <img src={img1_small} alt="Product" />
+                <img src={img1_small} alt="Product" className={setSelected(img1)} />
               </div>
               <div onClick={(e) => handleImg(img2)}>
-                <img src={img2_small} alt="Product" />
+                <img src={img2_small} alt="Product" className={setSelected(img2)} />
               </div>
               <div onClick={(e) => handleImg(img3)}>
-                <img src={img3_small} alt="Product" />
+                <img src={img3_small} alt="Product" className={setSelected(img3)} />
               </div>
               <div onClick={(e) => handleImg(img4)}>
-                <img src={img4_small} alt="Product" />
+                <img src={img4_small} alt="Product" className={setSelected(img4)} />
               </div>
             </div>
           </section>

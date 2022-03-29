@@ -8,28 +8,29 @@
   }
 }
 
-.l_product {
-  @apply flex flex-col flex-1 gap-2 md:gap-4 lg:gap-8 
-  pb-4 sm:pb-0
-  sm:max-w-lg;
+//estilos universais (nesse módulo)
+.main_img {
+  @apply sm:rounded-2xl hover:cursor-pointer;
+  min-width: 250px;
+}
+
+.selected {
+  opacity: 0.5;
+  border: 2px solid var(--orange);
+}
+
+//layout
+.container {
+  @apply flex flex-col flex-1 gap-2 md:gap-4 lg:gap-8;
+  max-width: 450px;
   user-select: none;
 
-  > img {
-    @apply sm:rounded-2xl hover:cursor-pointer;
-    min-width: 250px;
-  }
-
-  .product_images {
+  .l_product_images {
     @apply hidden sm:flex gap-2 md:gap-4 lg:gap-8;
-
+  
     img {
-      &.selected {
-        opacity: 0.5;
-        border: 2px solid var(--orange);
-      }
-
       @apply rounded-xl;
-
+  
       &:hover {
         opacity: 0.5;
         cursor: pointer;
@@ -47,25 +48,21 @@
   md:inset-0;
   background-color: var(--bg-light-black);
 
-  .l_product {
+  .container_modal {
     animation: 1s slidein;
-    @apply flex flex-col justify-center h-screen flex-1 gap-2 md:gap-4 lg:gap-8 
-    pb-4 sm:pb-0
-    sm:max-w-lg mx-auto;
+    @apply flex flex-col justify-center h-screen flex-1 
+    gap-6
+    mx-auto;
+    max-width: 500px;
 
-    > img {
-      @apply sm:rounded-2xl hover:cursor-pointer;
-      min-width: 250px;
-    }
-
-    .product_images {
-      @apply hidden sm:flex justify-around gap-2 md:gap-4 lg:gap-8;
-
+    .l_product_images_modal {
+      @apply hidden sm:flex justify-center
+      gap-6;
+    
       img {
-        flex: 1;
-
+        max-width: 75px;
         @apply rounded-xl;
-
+    
         &:hover {
           opacity: 0.5;
           cursor: pointer;
