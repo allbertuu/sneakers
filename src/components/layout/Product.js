@@ -10,7 +10,11 @@ import img3 from '../../assets/images/image-product-3.jpg';
 import img4_small from '../../assets/images/image-product-4-thumbnail.jpg';
 import img4 from '../../assets/images/image-product-4.jpg';
 
-import iconClose from '../../assets/images/icon-close-white.svg';
+import CloseIcon from '@mui/icons-material/Close';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
+// import iconClose from '../../assets/images/icon-close-white.svg';
 
 import styles from '../../styles/Product.module.scss';
 
@@ -58,12 +62,16 @@ function Product() {
         <div aria-hidden="true" className={styles.l_modal}>
           <section className={styles.container_modal}>
             <button className="lg:-mb-4 text-right" onClick={(e) => toggle()}>
-              <img src={iconClose} className="inline-block w-6" alt='Close' />
+              <CloseIcon fontSize='large' />
             </button>
-            <div className="flex">
-              {/* <button className="absolute">X</button> */}
+            <div className={styles.l_main_img}>
+              <button className={styles.prev}>
+                <ArrowBackIosNewIcon />
+              </button>
               <img className={styles.main_img} src={mainImg} alt="Main product" />
-              {/* <button className="absolute right-1/3">X</button> */}
+              <button className={styles.next}>
+                <ArrowForwardIosIcon />
+              </button>
             </div>
             <div className={styles.l_product_images_modal}>
               <div onClick={(e) => handleImg(img1)}>

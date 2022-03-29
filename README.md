@@ -54,6 +54,7 @@ Users should be able to:
 - TailwindCSS framework
 - Sass pre-processor
 - Mobile-first workflow
+- MUI React icons lib
 - [React](https://reactjs.org/) - JS library
 
 ### What I learned 📚
