@@ -93,9 +93,22 @@ Users should be able to:
 
 ## Author 🙎🏻‍♂️
 
-<!-- - Website - [Add your name here](https://www.your-site.com) -->
+- Website - [Alberto Albuquerque](https://portfolio-allbertuu.vercel.app/)
 - Frontend Mentor - [@allbertuu](https://www.frontendmentor.io/profile/allbertuu)
 - LinkedIn - [Alberto Albuquerque](https://www.linkedin.com/in/albertov-albuquerque/)
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://www.github.com/allbertuu">
+        <img src="https://avatars.githubusercontent.com/u/89992304?v=4" width="100px;" alt="Foto do Alberto Albuquerque no GitHub"/><br>
+        <sub>
+          <b>Alberto Albuquerque</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
 ## Acknowledgments ⭐
 
