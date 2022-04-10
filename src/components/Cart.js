@@ -11,10 +11,6 @@ function Cart({ price, deleteProduct, toggleCart }) {
 
   const { products } = useProducts();
 
-  function generateId() {
-    return Math.floor(Math.random() * 10000);
-  }
-
   return (
     <div className={styles.cartModal} onMouseLeave={(e) => toggleCart()}>
       <div className={styles.cart_header}>
@@ -27,7 +23,7 @@ function Cart({ price, deleteProduct, toggleCart }) {
           }
           {products.length > 0 &&
             products.map((product, key) => (
-              <li className={styles.item} key={generateId()}>
+              <li className={styles.item} key={key}>
                 <div className={styles.id}>{key + 1}</div>
                 <img src={mainImg} alt="Produto" />
                 <div className={styles.info}>
