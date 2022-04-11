@@ -25,7 +25,7 @@ function Cart({ price, deleteProduct, toggleCart }) {
             products.map((product, key) => (
               <li className={styles.item} key={key}>
                 <div className={styles.id}>{key + 1}</div>
-                <img src={mainImg} alt="Produto" />
+                <img src={mainImg} alt="Product view" />
                 <div className={styles.info}>
                   <div>{product.name}</div>
                   <div>&#36;{price} x {product.count} <b className="text-black">&#36;{adjustPrice(price * product.count)}</b></div>
