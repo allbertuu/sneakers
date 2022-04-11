@@ -46,7 +46,7 @@
     "tailwindcss": "^3.0.23"
   },
   "description": "Ecommerce product page",
-  "main": "postcss.config.js",
+  "main": "index.js",
   "keywords": [
     "ecommerce",
     "product",
