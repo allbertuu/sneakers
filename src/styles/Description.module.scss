@@ -59,3 +59,24 @@
     @apply flex flex-col lg:flex-row gap-4;
   }
 }
+
+.btnAddToCart {
+  min-height: 50px;
+
+  @apply flex items-center justify-center gap-4
+  ring-0 focus:ring-4 focus:ring-orange-300 
+  hover:bg-orange-500
+  shadow-xl shadow-orange-400/50;
+
+  color: white;
+  background-color: var(--orange) !important;
+  font-weight: 700;
+
+  @media (min-width: 1024px) {
+    & {
+      flex: 2;
+    }
+  }
+
+  border-radius: 0.6rem;
+}
