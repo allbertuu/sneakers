@@ -1,10 +1,12 @@
+// hooks
 import { useProducts } from '../hooks/useProducts';
+// scripts
 import adjustPrice from '../assets/scripts/adjustPrice';
-
+// icons and imgs
 import mainImg from '../assets/images/image-product-1-thumbnail.jpg';
 import removeIcon from '../assets/images/icon-delete.svg';
 import Checkout from './Checkout';
-
+// styles
 import styles from '../styles/Cart.module.scss';
 
 function Cart({ price, deleteProduct, toggleCart }) {
@@ -12,7 +14,7 @@ function Cart({ price, deleteProduct, toggleCart }) {
   const { products } = useProducts();
 
   return (
-    <div className={styles.cartModal} onMouseLeave={(e) => toggleCart()}>
+    <div className={styles.container} onMouseLeave={() => toggleCart()}>
       <div className={styles.cart_header}>
         <b>Cart</b>
       </div>
@@ -30,7 +32,7 @@ function Cart({ price, deleteProduct, toggleCart }) {
                   <div>{product.name}</div>
                   <div>&#36;{price} x {product.count} <b className="text-black">&#36;{adjustPrice(price * product.count)}</b></div>
                 </div>
-                <img src={removeIcon} alt="Remove product" className="self-center cursor-pointer" onClick={(e) => deleteProduct(product.name)} />
+                <img src={removeIcon} alt="Remove product" className="self-center cursor-pointer" onClick={() => deleteProduct(product.name)} />
               </li>
             ))
           }

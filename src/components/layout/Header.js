@@ -1,8 +1,9 @@
+// hooks
 import useToggle from '../../hooks/useToggle';
 import { useProducts } from '../../hooks/useProducts';
-
+// components
 import Cart from '../Cart';
-
+// icons and imgs
 import logoImg from '../../assets/images/logo.svg';
 import iconCart from '../../assets/images/icon-cart.svg';
 import imgAvatar from '../../assets/images/image-avatar.png';
@@ -36,7 +37,7 @@ function Header({ price }) {
           </a>
         </div>
         <nav>
-          <button className={styles.bars_icon} onClick={(e) => toggleMenu()}>
+          <button className={styles.bars_icon} onClick={() => toggleMenu()}>
             <img src={navBars} alt="Barra de navegação" />
           </button>
           <ul>
@@ -48,10 +49,10 @@ function Header({ price }) {
       </section>
       <section className={styles.personal}>
         <div className={styles.cart_icon}>
-          <img src={iconCart} alt="Cart" onClick={(e) => toggleCart()} />
+          <img src={iconCart} alt="Cart" onClick={() => toggleCart()} />
         </div>
         <div className={isCartOpen ? styles.profile_active : styles.profile}>
-          <img src={imgAvatar} alt="Avatar" onClick={(e) => toggleCart()} />
+          <img src={imgAvatar} alt="Avatar" onClick={() => toggleCart()} />
         </div>
       </section>
 
@@ -64,7 +65,7 @@ function Header({ price }) {
       {isMenuOpen &&
         <div className={styles.menuModal}>
           <aside className={styles.comeMenu}>
-            <img src={iconClose} onClick={(e) => toggleMenu()} alt='Close menu' />
+            <img src={iconClose} onClick={() => toggleMenu()} alt='Close menu' />
             <nav>
               <ul>
                 {pages.map((page, key) => (

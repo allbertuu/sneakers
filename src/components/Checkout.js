@@ -1,8 +1,9 @@
-import styles from '../styles/Checkout.module.scss';
+// styles
+import button from '../styles/Button.module.scss';
 
 function Checkout() {
   return (
-    <button className={styles.checkout}>
+    <button className={button.btn}>
       Checkout
     </button>
   );

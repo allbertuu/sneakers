@@ -1,4 +1,4 @@
-//styles
+// styles
 import '../../styles/Footer.scss';
 
 function Footer() {

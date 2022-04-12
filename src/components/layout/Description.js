@@ -1,15 +1,16 @@
 import { useState } from 'react';
-//hooks
+// hooks
 import useToggle from "../../hooks/useToggle";
 import { useProducts } from '../../hooks/useProducts';
-//icons
+// icons
 import iconMinus from "../../assets/images/icon-minus.svg";
 import iconPlus from "../../assets/images/icon-plus.svg";
 import btnClose from "../../assets/images/close-modal.svg";
 import iconCart from '../../assets/images/icon-cart-white.svg';
-//styles
+// styles
 import description from '../../styles/Description.module.scss';
 import countStyles from '../../styles/Count.module.scss';
+import button from '../../styles/Button.module.scss';
 
 function Description({ price }) {
 
@@ -56,8 +57,8 @@ function Description({ price }) {
         These low-profile sneakers are your perfect casual wear companion.
         Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
       </p>
-      <div className={description.l_price}>
-        <div className={description.l_with_discount}>
+      <div className={description.c_price}>
+        <div className={description.c_with_discount}>
           <span className={description.price}>&#36;{price}</span>
           <div className={description.discount}>50%</div>
         </div>
@@ -65,7 +66,7 @@ function Description({ price }) {
       </div>
 
 
-      <form onSubmit={(e) => handleSubmit(e)} className={description.l_buttons}>
+      <form onSubmit={(e) => handleSubmit(e)} className={description.c_buttons}>
         <div className={countStyles.container}>
           <button onClick={subtractOne}>
             <img src={iconMinus} alt='subtract 1' />
@@ -77,7 +78,7 @@ function Description({ price }) {
         </div>
 
         {isOpen &&
-          <div aria-hidden="true" className={countStyles.l_modal}>
+          <div aria-hidden="true" className={countStyles.c_modal}>
             <div className={countStyles.modal}>
               <div className={countStyles.modal_content}>
                 <div className={countStyles.modal_header}>
@@ -94,14 +95,14 @@ function Description({ price }) {
                   </p>
                 </div>
                 <div className={countStyles.modal_footer}>
-                  <button onClick={() => toggle()} type="button" className={countStyles.agree}>Ok</button>
+                  <button onClick={() => toggle()} type="button" className={`${button.btn}`}>Ok</button>
                 </div>
               </div>
             </div>
           </div>
         }
 
-        <button type='submit' className={description.btnAddToCart} onClick={() => addToCart("Fall Limited Edition Sneakers")}>
+        <button type='submit' className={`${button.btn} ${button.btn_add}`} onClick={() => addToCart("Fall Limited Edition Sneakers")}>
           <img src={iconCart} alt='Cart icon' />
           Add to cart
         </button>

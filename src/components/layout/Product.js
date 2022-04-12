@@ -1,13 +1,13 @@
 import { useState } from 'react';
+// hooks
 import useToggle from '../../hooks/useToggle';
-
-//scripts
+// scripts
 import { productImagesList } from '../../assets/scripts/productImagesList';
-//icons
+// icons
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-//styles
+// styles
 import styles from '../../styles/Product.module.scss';
 
 function Product() {
@@ -42,7 +42,7 @@ function Product() {
     <>
       <section className={styles.container}>
         <img className={styles.main_img} src={mainImg} alt="Main product" onClick={() => toggle()} />
-        <div className={styles.l_product_images}>
+        <div className={styles.c_product_images}>
           {productImagesList.map((srcProductImage, index) => (
             <div onClick={() => setMainImg(srcProductImage)} key={index}>
               <img src={srcProductImage} alt="Product view" className={setSelectedImg(srcProductImage)} />
@@ -52,12 +52,12 @@ function Product() {
       </section>
 
       {isOpen &&
-        <div aria-hidden="true" className={styles.l_modal}>
-          <section className={styles.container_modal}>
-            <button className="lg:-mb-4 text-right" onClick={() => toggle()}>
+        <div aria-hidden="true" className={styles.modal}>
+          <section className={styles.modal_container}>
+            <button className={styles.closeIcon} onClick={() => toggle()}>
               <CloseIcon fontSize='large' />
             </button>
-            <div className={styles.l_main_img}>
+            <div className={styles.c_main_img}>
               <button className={styles.prev} onClick={() => prev()}>
                 <ArrowBackIosNewIcon />
               </button>
@@ -66,7 +66,7 @@ function Product() {
                 <ArrowForwardIosIcon />
               </button>
             </div>
-            <div className={styles.l_product_images_modal}>
+            <div className={styles.c_product_images_modal}>
               {productImagesList.map((srcProductImage, index) => (
                 <div onClick={() => setMainImg(srcProductImage)} key={index}>
                   <img src={srcProductImage} alt="Product view" className={setSelectedImg(srcProductImage)} />

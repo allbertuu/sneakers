@@ -4,6 +4,7 @@
 
 :root {
   --orange: hsl(26, 100%, 55%);
+  --dark-orange: hsl(26, 96%, 52%);
   --light-orange: hsl(25, 100%, 94%);
   --dark-blue: hsl(220, 13%, 13%);
   --dark-gray-blue: hsl(219, 9%, 45%);
@@ -15,16 +16,15 @@
 body {
   font-size: 1rem;
   font-family: "Kumbh Sans", sans-serif;
-  //highlight text selected
+
   ::selection {
     color: white;
     background-color: var(--orange);
   }
-  // scrollbar
+
   &::-webkit-scrollbar {
     width: 0.75rem;
   }
-
   &::-webkit-scrollbar-thumb {
     background: var(--orange);
     // border-radius: 3rem;
@@ -36,8 +36,8 @@ body {
   @apply w-full min-h-screen md:w-4/5 m-auto;
 
   main {
-    display: flex;
-    @apply flex-col sm:flex-row sm:justify-center gap-4 sm:gap-8 md:gap-12 xl:gap-32
+    @apply flex flex-col sm:flex-row sm:justify-center 
+    gap-4 sm:gap-8 md:gap-12 xl:gap-32
     sm:px-10 sm:py-16;
   }
 }
