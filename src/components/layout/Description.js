@@ -84,7 +84,7 @@ function Description({ price }) {
                   <h3>
                     Oops!
                   </h3>
-                  <button type="button" onClick={(e) => toggle()}>
+                  <button type="button" onClick={() => toggle()}>
                     <img src={btnClose} alt="Fechar modal" />
                   </button>
                 </div>
@@ -94,7 +94,7 @@ function Description({ price }) {
                   </p>
                 </div>
                 <div className={countStyles.modal_footer}>
-                  <button onClick={(e) => toggle()} type="button" className={countStyles.agree}>Ok</button>
+                  <button onClick={() => toggle()} type="button" className={countStyles.agree}>Ok</button>
                 </div>
               </div>
             </div>

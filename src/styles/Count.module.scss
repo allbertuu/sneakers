@@ -15,8 +15,8 @@
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  //media querys - lg
   @media (min-width: 1024px) {
     & {
       flex: 1;
@@ -24,10 +24,9 @@
   }
 
   button {
-    @apply flex justify-center items-center flex-1;
-
-    padding: 0 0.5rem;
+    padding: 0 1rem;
     height: 100%;
+    min-width: 45px;
 
     color: var(--orange);
     background-color: transparent;
@@ -38,11 +37,11 @@
   }
 
   .display {
-    display: flex;
-    justify-content: center;
-    flex: 3;
+    min-width: 80px;
+    max-width: 100px;
 
-    cursor: default;
+    text-align: center;
+    background-color: var(--light-gray-blue);
   }
 }
 
@@ -78,7 +77,7 @@
           inline-flex items-center;
         }
       }
-      
+
       .modal_body {
         @apply p-6 space-y-6;
 
@@ -96,24 +95,17 @@
           @apply focus:ring-4 rounded-lg 
           px-5 py-2.5
           font-medium text-sm;
-
-          &.agree {
-            background-color: var(--orange);
-            @apply text-white text-center
-            hover:bg-orange-600 
-            focus:ring-orange-300
-            dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800;
-          }
-
-          &.disagree {
-            @apply text-gray-500 hover:text-gray-900 
-            bg-white hover:bg-gray-100 
-            focus:ring-gray-300
-            border border-gray-200 px-5 py-2.5 focus:z-10 
-            dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600;
-          }
         }
       }
     }
   }
+}
+
+.btn_agree {
+  background-color: var(--orange) !important;
+  @apply text-white text-center font-medium text-sm
+    focus:ring-4 rounded-lg 
+    px-5 py-2.5
+    hover:bg-orange-600
+    focus:ring-orange-300
 }

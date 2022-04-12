@@ -62,6 +62,7 @@
 
 .btnAddToCart {
   min-height: 50px;
+  min-width: 80px;
 
   @apply flex items-center justify-center gap-4
   ring-0 focus:ring-4 focus:ring-orange-300 

@@ -1,10 +1,11 @@
-import styles from '../../styles/Footer.module.scss';
+//styles
+import '../../styles/Footer.scss';
 
 function Footer() {
   return (
     <footer>
-      <div className={styles.l_footer}>
-        <section className={styles.author}>Made by <a href='https://www.github.com/allbertuu'>Alberto Albuquerque</a></section>
+      <div className="c_footer">
+        <section className="author">Made by <a href='https://www.github.com/allbertuu'>Alberto Albuquerque</a></section>
       </div>
     </footer>
   );
