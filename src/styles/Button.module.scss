@@ -6,7 +6,7 @@
   font-weight: 700;
 
   background-color: var(--orange) !important;
-  @apply ring-0 focus:ring-4 focus:ring-orange-300;
+  @apply focus:ring-4 focus:ring-orange-300;
 
   display: flex;
   align-items: center;
@@ -17,6 +17,8 @@
   &:hover {
     background-color: var(--dark-orange) !important;
   }
+
+  transition: all ease .2s;
 }
 
 .btn_add {
