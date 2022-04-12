@@ -52,7 +52,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - TailwindCSS framework
-- Sass pre-processor
+- Scss pre-processor
 - Mobile-first workflow
 - MUI React icons lib
 - [React](https://reactjs.org/) - JS library
