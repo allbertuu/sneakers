@@ -1,3 +1,5 @@
+@import "./colors/colors.scss";
+
 .container {
   @apply flex flex-col justify-center flex-1
   px-4 sm:px-0
@@ -6,7 +8,7 @@
   min-width: 250px;
 
   .brand {
-    color: var(--orange);
+    color: $primary-color;
     letter-spacing: 2px;
     font-weight: 700;
     font-size: small;
@@ -20,7 +22,7 @@
   }
   p {
     font-size: 1rem;
-    color: var(--dark-gray-blue);
+    color: $secondary-color-dark;
 
     padding-bottom: 1.5rem;
   }
@@ -38,8 +40,8 @@
       }
 
       .discount {
-        color: var(--orange);
-        background-color: var(--light-orange);
+        color: $primary-color;
+        background-color: $primary-color-light;
 
         padding: 0 0.25rem;
         @apply text-base sm:text-sm lg:text-base
@@ -48,7 +50,7 @@
     }
 
     .no_discount {
-      color: var(--gray-blue);
+      color: $secondary-color;
       text-decoration: line-through;
     }
   }

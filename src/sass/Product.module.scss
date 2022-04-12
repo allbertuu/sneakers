@@ -1,3 +1,5 @@
+@import "./colors/colors.scss";
+
 // keyframes
 @keyframes slidein {
   from {
@@ -15,7 +17,7 @@
 
 .selected {
   opacity: 0.5;
-  border: 2px solid var(--orange);
+  border: 2px solid $primary-color;
 }
 
 .c_product_images,
@@ -55,7 +57,7 @@
   justify-center items-center
   h-full w-full
   md:inset-0;
-  background-color: var(--bg-light-black);
+  background-color: $dark-color;
 
   .modal_container {
     animation: 1s slidein;
@@ -65,10 +67,10 @@
     max-width: 500px;
 
     .closeIcon {
-      @apply lg:-mb-4 text-right;
+      @apply lg:-mb-4 self-end;
       color: white;
       &:hover {
-        color: var(--orange);
+        color: $primary-color;
       }
     }
 
@@ -100,7 +102,7 @@
         }
 
         &:hover {
-          color: var(--orange);
+          color: $primary-color;
         }
       }
     }

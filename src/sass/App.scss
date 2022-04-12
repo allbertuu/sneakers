@@ -2,16 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --orange: hsl(26, 100%, 55%);
-  --dark-orange: hsl(26, 96%, 52%);
-  --light-orange: hsl(25, 100%, 94%);
-  --dark-blue: hsl(220, 13%, 13%);
-  --dark-gray-blue: hsl(219, 9%, 45%);
-  --gray-blue: hsl(220, 14%, 75%);
-  --light-gray-blue: hsl(223, 64%, 98%);
-  --bg-light-black: hsla(0, 0%, 0%, 0.75);
-}
+@import './colors/colors.scss'; 
 
 body {
   font-size: 1rem;
@@ -19,15 +10,14 @@ body {
 
   ::selection {
     color: white;
-    background-color: var(--orange);
+    background-color: $primary-color;
   }
 
   &::-webkit-scrollbar {
     width: 0.75rem;
   }
   &::-webkit-scrollbar-thumb {
-    background: var(--orange);
-    // border-radius: 3rem;
+    background: $primary-color;
     border: 2px solid rgba(0, 0, 0, 0);
   }
 }

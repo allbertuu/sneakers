@@ -1,3 +1,5 @@
+@import "./colors/colors.scss";
+
 // keyframes
 @keyframes slidein {
   from {
@@ -10,8 +12,8 @@
 
 .container {
   height: 50px;
-  border-radius: .6rem;
-  background-color: var(--light-gray-blue);
+  border-radius: 0.6rem;
+  background-color: $secondary-color-light;
 
   display: flex;
   align-items: center;
@@ -28,7 +30,7 @@
     height: 100%;
     min-width: 45px;
 
-    color: var(--orange);
+    color: $primary-color;
     background-color: transparent;
 
     &:active img {
@@ -41,7 +43,7 @@
     max-width: 100px;
 
     text-align: center;
-    background-color: var(--light-gray-blue);
+    background-color: $secondary-color-light;
   }
 }
 
@@ -50,12 +52,12 @@
   pt-4
   h-full w-full
   md:inset-0;
-  background-color: var(--bg-light-black);
+  background-color: $dark-color;
 
   .modal {
     @apply relative px-4 max-w-2xl h-full md:h-auto 
     m-auto md:mt-20;
-    animation: .5s slidein;
+    animation: 0.5s slidein;
 
     .modal_content {
       @apply relative bg-white rounded-lg shadow dark:bg-gray-700;
@@ -92,7 +94,7 @@
         border-t border-gray-200 dark:border-gray-600;
 
         button {
-          padding: 0.6rem 1.25rem;
+          padding: 0.5rem 1.25rem;
           flex: none;
           min-height: 25px;
         }

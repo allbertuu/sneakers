@@ -1,13 +1,15 @@
+@import "./colors/colors.scss";
+
 footer {
   @apply absolute inset-x-0;
-  background-color: var(--orange);
+  background-color: $primary-color;
   user-select: none;
 
   .c_footer {
     @apply flex justify-center
     p-4 md:p-6
     text-white;
-    
+
     .author {
       font-style: italic;
 

@@ -8,7 +8,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 // styles
-import styles from '../../styles/Product.module.scss';
+import styles from '../../sass/Product.module.scss';
 
 function Product() {
 

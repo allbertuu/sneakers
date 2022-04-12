@@ -9,7 +9,8 @@ import iconCart from '../../assets/images/icon-cart.svg';
 import imgAvatar from '../../assets/images/image-avatar.png';
 import navBars from '../../assets/images/icon-menu.svg';
 import iconClose from '../../assets/images/icon-close.svg';
-import styles from '../../styles/Header.module.scss';
+// styles
+import styles from '../../sass/Header.module.scss';
 
 function Header({ price }) {
 

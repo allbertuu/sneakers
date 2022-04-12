@@ -1,3 +1,5 @@
+@import "./colors/colors.scss";
+
 // keyframes
 @keyframes Menu {
   from {
@@ -16,7 +18,7 @@ header {
 
   @media (min-width: 640px) {
     & {
-      border-bottom: 1px solid var(--light-gray-blue);
+      border-bottom: 1px solid $secondary-color-light;
     }
   }
 
@@ -40,10 +42,10 @@ header {
         @apply hidden lg:flex md:h-14;
 
         li {
-          color: var(--dark-blue);
+          color: $secondary-color-darker;
           transition: all 0.3s;
           &:hover {
-            border-bottom: 3px solid var(--orange);
+            border-bottom: 3px solid $primary-color;
             font-weight: 700;
             cursor: pointer;
           }
@@ -71,7 +73,7 @@ header {
 
         &:hover {
           transform: scale(1.1);
-          border: 2px solid var(--orange);
+          border: 2px solid $primary-color;
         }
       }
     }
@@ -80,7 +82,7 @@ header {
         transform: scale(1.1);
         @apply h-6 md:h-12 md:-mt-4
         hover:cursor-pointer rounded-full;
-        border: 2px solid var(--orange);
+        border: 2px solid $primary-color;
       }
     }
   }
@@ -92,7 +94,7 @@ header {
     bottom: 0;
     z-index: 50;
     width: 100vw;
-    background-color: var(--bg-light-black);
+    background-color: $dark-color;
 
     aside {
       display: flex;
@@ -125,10 +127,10 @@ header {
           gap: 1.5rem;
 
           li {
-            color: var(--dark-blue);
+            color: $secondary-color-darker;
             transition: all 0.2s;
             &:hover {
-              border-bottom: 3px solid var(--orange);
+              border-bottom: 3px solid $primary-color;
               font-weight: 700;
               cursor: pointer;
             }

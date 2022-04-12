@@ -1,3 +1,5 @@
+@import "./colors/colors.scss";
+
 // keyframes
 @keyframes slidein {
   from {
@@ -29,11 +31,11 @@ bg-white max-w-xs md:max-w-lg
       .withoutItems {
         @apply text-center py-12;
         font-weight: 700;
-        color: var(--dark-gray-blue);
+        color: $secondary-color-dark;
       }
 
       .item {
-        color: var(--dark-gray-blue);
+        color: $secondary-color-dark;
         @apply flex gap-4;
 
         .id {

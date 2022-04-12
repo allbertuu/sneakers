@@ -8,9 +8,9 @@ import iconPlus from "../../assets/images/icon-plus.svg";
 import btnClose from "../../assets/images/close-modal.svg";
 import iconCart from '../../assets/images/icon-cart-white.svg';
 // styles
-import description from '../../styles/Description.module.scss';
-import countStyles from '../../styles/Count.module.scss';
-import button from '../../styles/Button.module.scss';
+import description from '../../sass/Description.module.scss';
+import countStyles from '../../sass/Count.module.scss';
+import button from '../../sass/Button.module.scss';
 
 function Description({ price }) {
 

@@ -1,5 +1,5 @@
 // styles
-import button from '../styles/Button.module.scss';
+import button from '../sass/Button.module.scss';
 
 function Checkout() {
   return (

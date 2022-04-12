@@ -1,0 +1,39 @@
+@import "./colors/colors.scss";
+
+$btn-color: $primary-color;
+$btn-color-hover: $primary-color-dark;
+$btn-text-color: #fff;
+$btn-radius: 0.6rem;
+
+.btn {
+  min-height: 50px;
+  border-radius: $btn-radius;
+
+  color: $btn-text-color;
+  font-weight: 700;
+
+  background-color: $btn-color !important;
+  @apply focus:ring-4 focus:ring-orange-300;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex: 1;
+
+  &:hover {
+    background-color: $btn-color-hover !important;
+  }
+
+  transition: all ease 0.2s;
+}
+
+.btn_add {
+  @apply shadow-xl shadow-orange-400/50;
+
+  @media (min-width: 1024px) {
+    & {
+      flex: 2;
+    }
+  }
+}
