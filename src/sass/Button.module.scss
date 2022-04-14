@@ -13,7 +13,6 @@ $btn-radius: 0.6rem;
   font-weight: 700;
 
   background-color: $btn-color !important;
-  @apply focus:ring-4 focus:ring-orange-300;
 
   display: flex;
   align-items: center;
