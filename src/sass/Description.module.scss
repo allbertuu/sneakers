@@ -1,5 +1,9 @@
 @import "./colors/colors.scss";
 
+.brand, .c_price, .c_buttons {
+  user-select: none;
+}
+
 .container {
   @apply flex flex-col justify-center flex-1
   px-4 sm:px-0
@@ -12,7 +16,6 @@
     letter-spacing: 2px;
     font-weight: 700;
     font-size: small;
-    user-select: none;
     @apply xl:text-base;
   }
   h1 {
@@ -30,7 +33,6 @@
     @apply font-bold
     flex lg:flex-col justify-between items-center lg:items-start;
     padding-bottom: 2rem;
-    user-select: none;
 
     .c_with_discount {
       @apply flex items-center gap-2 lg:gap-4;
@@ -56,7 +58,6 @@
   }
 
   .c_buttons {
-    user-select: none;
     font-weight: 700;
     @apply flex flex-col lg:flex-row gap-4;
   }
