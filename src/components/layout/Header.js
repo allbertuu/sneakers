@@ -10,7 +10,7 @@ import imgAvatar from '../../assets/images/image-avatar.png';
 import navBars from '../../assets/images/icon-menu.svg';
 import iconClose from '../../assets/images/icon-close.svg';
 // styles
-import styles from '../../sass/Header.module.scss';
+import '../../sass/Header.scss';
 
 function Header({ price }) {
 
@@ -31,14 +31,14 @@ function Header({ price }) {
 
   return (
     <header>
-      <section className={styles.navbar}>
-        <div className={styles.logo}>
+      <section className="navbar">
+        <div className="logo">
           <a href="/">
-            <img src={logoImg} alt="logo" />
+            <img src={logoImg} alt="logotipo" />
           </a>
         </div>
         <nav>
-          <button className={styles.bars_icon} onClick={() => toggleMenu()}>
+          <button className="bars_icon" onClick={() => toggleMenu()}>
             <img src={navBars} alt="Barra de navegação" />
           </button>
           <ul>
@@ -48,11 +48,11 @@ function Header({ price }) {
           </ul>
         </nav>
       </section>
-      <section className={styles.personal}>
-        <div className={styles.cart_icon}>
+      <section className="personal">
+        <div className="cart_icon">
           <img src={iconCart} alt="Cart" onClick={() => toggleCart()} />
         </div>
-        <div className={isCartOpen ? styles.profile_active : styles.profile}>
+        <div className={isCartOpen ? "profile_active" : "profile"}>
           <img src={imgAvatar} alt="Avatar" onClick={() => toggleCart()} />
         </div>
       </section>
@@ -64,8 +64,8 @@ function Header({ price }) {
 
       {/* Modal menu */}
       {isMenuOpen &&
-        <div className={styles.menuModal}>
-          <aside className={styles.comeMenu}>
+        <div className="menuModal">
+          <aside className="comeMenu">
             <img src={iconClose} onClick={() => toggleMenu()} alt='Close menu' />
             <nav>
               <ul>
