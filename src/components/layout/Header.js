@@ -19,14 +19,14 @@ function Header({ price }) {
   const [isCartOpen, toggleCart] = useToggle();
   const [isMenuOpen, toggleMenu] = useToggle();
 
-  const { products } = useProducts();
+  const { products, setProducts } = useProducts();
 
   function deleteProduct(productName = '') {
     let productToDelete = products.findIndex((product) => {
       return product.name === productName;
     });
     products.splice(productToDelete, 1);
-    toggleCart();
+    setProducts([...products])
   }
 
   return (
@@ -59,7 +59,7 @@ function Header({ price }) {
 
       {/* Modal cart */}
       {isCartOpen &&
-        <Cart price={price} deleteProduct={deleteProduct} toggleCart={toggleCart} />
+        <Cart price={price} deleteProduct={deleteProduct} />
       }
 
       {/* Modal menu */}

@@ -9,12 +9,12 @@ import Checkout from './Checkout';
 // styles
 import styles from '../sass/Cart.module.scss';
 
-function Cart({ price, deleteProduct, toggleCart }) {
+function Cart({ price, deleteProduct }) {
 
   const { products } = useProducts();
 
   return (
-    <div className={styles.container} onMouseLeave={() => toggleCart()}>
+    <div className={styles.container}>
       <div className={styles.cart_header}>
         <b>Cart</b>
       </div>

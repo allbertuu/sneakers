@@ -27,7 +27,7 @@ function Description({ price }) {
   const [isOpen, toggle] = useToggle();
 
   //logic of addToCart
-  const { products } = useProducts();
+  const { products, setProducts } = useProducts();
 
   function addToCart(productToAdd = 'Product') {
     // don't add nonexistent product
@@ -44,9 +44,8 @@ function Description({ price }) {
     else {
       products[productToUpdate].count += count;
     }
-    // reset count
     setCount(0);
-    // um modal de adicionado com sucesso
+    setProducts([...products])
   }
 
   return (
