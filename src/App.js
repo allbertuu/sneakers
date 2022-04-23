@@ -6,7 +6,7 @@ import Product from './components/layout/Product';
 import Description from './components/layout/Description'
 import Footer from './components/layout/Footer';
 // contexts
-import { ProductsContextProvider } from './contexts/Products';
+import { ProductsListContextProvider } from './contexts/ProductsList';
 // styles
 import './sass/App.scss';
 
@@ -15,7 +15,7 @@ function App() {
   const price = adjustPrice(125.00);
 
   return (
-    <ProductsContextProvider>
+    <ProductsListContextProvider>
       <div className="container">
         <Header price={price} />
         <main>
@@ -24,7 +24,7 @@ function App() {
         </main>
         <Footer />
       </div>
-    </ProductsContextProvider>
+    </ProductsListContextProvider>
   );
 }
 

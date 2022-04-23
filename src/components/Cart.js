@@ -1,5 +1,5 @@
 // hooks
-import { useProducts } from '../hooks/useProducts';
+import { useProductsList } from '../hooks/useProductsList';
 // scripts
 import adjustPrice from '../assets/scripts/adjustPrice';
 // icons and imgs
@@ -11,7 +11,7 @@ import styles from '../sass/Cart.module.scss';
 
 function Cart({ price, deleteProduct }) {
 
-  const { products } = useProducts();
+  const { productsList } = useProductsList();
 
   return (
     <div className={styles.container}>
@@ -20,11 +20,11 @@ function Cart({ price, deleteProduct }) {
       </div>
       <div className={styles.cart_body}>
         <ol className={styles.cart_items}>
-          {products.length === 0 &&
+          {productsList.length === 0 &&
             <p className={styles.withoutItems}>Your cart is empty</p>
           }
-          {products.length > 0 &&
-            products.map((product, key) => (
+          {productsList.length > 0 &&
+            productsList.map((product, key) => (
               <li className={styles.item} key={key}>
                 <div className={styles.id}>{key + 1}</div>
                 <img src={mainImg} alt="Product view" />
@@ -37,7 +37,7 @@ function Cart({ price, deleteProduct }) {
             ))
           }
         </ol>
-        {products.length > 0 && 
+        {productsList.length > 0 &&
           <Checkout />
         }
       </div>

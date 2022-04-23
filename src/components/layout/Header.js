@@ -1,6 +1,6 @@
 // hooks
 import useToggle from '../../hooks/useToggle';
-import { useProducts } from '../../hooks/useProducts';
+import { useProductsList } from '../../hooks/useProductsList';
 // components
 import Cart from '../Cart';
 // icons and imgs
@@ -19,14 +19,14 @@ function Header({ price }) {
   const [isCartOpen, toggleCart] = useToggle();
   const [isMenuOpen, toggleMenu] = useToggle();
 
-  const { products, setProducts } = useProducts();
+  const { productsList, setProductsList } = useProductsList();
 
   function deleteProduct(productName = '') {
-    let productToDelete = products.findIndex((product) => {
+    let productToDelete = productsList.findIndex((product) => {
       return product.name === productName;
     });
-    products.splice(productToDelete, 1);
-    setProducts([...products])
+    productsList.splice(productToDelete, 1);
+    setProductsList([...productsList])
   }
 
   return (

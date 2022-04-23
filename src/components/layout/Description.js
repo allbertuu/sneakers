@@ -1,7 +1,7 @@
 import { useState } from 'react';
 // hooks
 import useToggle from "../../hooks/useToggle";
-import { useProducts } from '../../hooks/useProducts';
+import { useProductsList } from '../../hooks/useProductsList';
 // icons
 import iconMinus from "../../assets/images/icon-minus.svg";
 import iconPlus from "../../assets/images/icon-plus.svg";
@@ -27,7 +27,7 @@ function Description({ price }) {
   const [isOpen, toggle] = useToggle();
 
   //logic of addToCart
-  const { products, setProducts } = useProducts();
+  const { productsList, setProductsList } = useProductsList();
 
   function addToCart(productToAdd = 'Product') {
     // don't add nonexistent product
@@ -35,17 +35,17 @@ function Description({ price }) {
       return;
     }
     // update existent product (if have), if not: add new
-    let productToUpdate = products.findIndex((product) => {
+    let productToUpdate = productsList.findIndex((product) => {
       return product.name === productToAdd;
     });
     if (productToUpdate === -1) {
-      products.push({ name: productToAdd, count: count })
+      productsList.push({ name: productToAdd, count: count })
     }
     else {
-      products[productToUpdate].count += count;
+      productsList[productToUpdate].count += count;
     }
     setCount(0);
-    setProducts([...products])
+    setProductsList([...productsList])
   }
 
   return (
