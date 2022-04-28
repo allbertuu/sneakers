@@ -12,7 +12,7 @@ import iconClose from '../../assets/images/icon-close.svg';
 // styles
 import '../../sass/Header.scss';
 
-function Header({ price }) {
+function Header() {
 
   const pages = ['Collections', 'Men', 'Women', 'About', 'Contact'];
 
@@ -59,7 +59,7 @@ function Header({ price }) {
 
       {/* Modal cart */}
       {isCartOpen &&
-        <Cart price={price} deleteProduct={deleteProduct} />
+        <Cart deleteProduct={deleteProduct} />
       }
 
       {/* Modal menu */}

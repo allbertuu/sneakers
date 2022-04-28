@@ -12,7 +12,7 @@ import description from '../../sass/Description.module.scss';
 import countStyles from '../../sass/Count.module.scss';
 import button from '../../sass/Button.module.scss';
 
-function Description({ price }) {
+function Description() {
 
   const [count, setCount] = useState(0);
 
@@ -58,7 +58,7 @@ function Description({ price }) {
       </p>
       <div className={description.c_price}>
         <div className={description.c_with_discount}>
-          <span className={description.price}>&#36;{price}</span>
+          <span className={description.price}>{125.00.toLocaleString('en-US', {style: 'currency', currency: 'USD', currencySign: 'standard'})}</span>
           <div className={description.discount}>50%</div>
         </div>
         <span className={description.no_discount}>&#36;250.00</span>

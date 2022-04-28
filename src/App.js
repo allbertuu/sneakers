@@ -1,5 +1,3 @@
-// scripts
-import adjustPrice from './assets/scripts/adjustPrice';
 // components
 import Header from './components/layout/Header';
 import Product from './components/layout/Product';
@@ -11,16 +9,13 @@ import { ProductsListContextProvider } from './contexts/ProductsList';
 import './sass/App.scss';
 
 function App() {
-
-  const price = adjustPrice(125.00);
-
   return (
     <ProductsListContextProvider>
       <div className="container">
-        <Header price={price} />
+        <Header />
         <main>
           <Product />
-          <Description price={price} />
+          <Description />
         </main>
         <Footer />
       </div>
