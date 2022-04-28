@@ -1,18 +1,13 @@
 @import "./colors/colors.scss";
 
-$btn-color: $primary-color;
-$btn-color-hover: $primary-color-dark;
-$btn-text-color: #fff;
-$btn-radius: 0.6rem;
-
 .btn {
   min-height: 50px;
-  border-radius: $btn-radius;
+  border-radius: .6rem;
 
-  color: $btn-text-color;
+  color: #FFF;
   font-weight: 700;
 
-  background-color: $btn-color !important;
+  background-color: $primary-color !important;
 
   display: flex;
   align-items: center;
@@ -21,7 +16,11 @@ $btn-radius: 0.6rem;
   flex: 1;
 
   &:hover {
-    background-color: $btn-color-hover !important;
+    background-color: $primary-color-light !important;
+  }
+
+  &:active {
+    background-color: $primary-color-dark !important;
   }
 
   transition: all ease 0.2s;
