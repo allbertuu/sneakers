@@ -9,6 +9,8 @@ import styles from '../sass/Cart.module.scss';
 
 function Cart({ deleteProduct }) {
 
+  const price = 125.00.toLocaleString('en-US', {style: 'currency', currency: 'USD', currencySign: 'standard'});
+
   const { productsList } = useProductsList();
 
   return (
@@ -28,7 +30,7 @@ function Cart({ deleteProduct }) {
                 <img src={mainImg} alt="Product view" />
                 <div className={styles.info}>
                   <div>{product.name}</div>
-                  <div>{125.00.toLocaleString('en-US', {style: 'currency', currency: 'USD', currencySign: 'standard'})} x {product.count} <b className="text-black">&#36;{125.00 * product.count}</b></div>
+                  <div>{price} x {product.count} <b className="text-black">&#36;{125.00 * product.count}</b></div>
                 </div>
                 <img src={removeIcon} alt="Remove product" className="self-center cursor-pointer" onClick={() => deleteProduct(product.name)} />
               </li>

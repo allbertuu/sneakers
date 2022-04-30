@@ -14,6 +14,8 @@ import button from '../../sass/Button.module.scss';
 
 function Description() {
 
+  const price = 125.00.toLocaleString('en-US', {style: 'currency', currency: 'USD', currencySign: 'standard'});
+
   const [count, setCount] = useState(0);
 
   function handleSubmit(e) {
@@ -58,7 +60,7 @@ function Description() {
       </p>
       <div className={description.c_price}>
         <div className={description.c_with_discount}>
-          <span className={description.price}>{125.00.toLocaleString('en-US', {style: 'currency', currency: 'USD', currencySign: 'standard'})}</span>
+          <span className={description.price}>{price}</span>
           <div className={description.discount}>50%</div>
         </div>
         <span className={description.no_discount}>&#36;250.00</span>
