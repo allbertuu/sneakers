@@ -26,10 +26,10 @@ function Cart({ deleteProduct }) {
           {productsList.length > 0 &&
             productsList.map((product, key) => (
               <li className={styles.item} key={key}>
-                <div className={styles.id}>{key + 1}</div>
+                <div>{key + 1}</div>
                 <img src={mainImg} alt="Product view" />
                 <div className={styles.info}>
-                  <div>{product.name}</div>
+                  <p>{product.name}</p>
                   <div>{price} x {product.count} <b className="text-black">&#36;{125.00 * product.count}</b></div>
                 </div>
                 <img src={removeIcon} alt="Remove product" className="self-center cursor-pointer" onClick={() => deleteProduct(product.name)} />
