@@ -1,14 +1,6 @@
-@import "./colors/colors.scss";
-
+@import "./variables/colors/colors.scss";
 // keyframes
-@keyframes slidein {
-  from {
-    transform: scale(0.5);
-  }
-  to {
-    transform: scale(1);
-  }
-}
+@import "./common/keyframes.scss";
 
 .main_img {
   @apply sm:rounded-2xl;

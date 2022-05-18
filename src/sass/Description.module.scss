@@ -1,6 +1,8 @@
-@import "./colors/colors.scss";
+@import "./variables/colors/colors.scss";
 
-.brand, .c_price, .c_buttons {
+.brand,
+.c_price,
+.c_buttons {
   user-select: none;
 }
 

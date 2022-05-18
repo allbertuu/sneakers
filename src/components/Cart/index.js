@@ -1,11 +1,11 @@
 // hooks
-import { useProductsList } from '../hooks/useProductsList';
+import { useProductsList } from '../../hooks/useProductsList';
 // icons and imgs
-import mainImg from '../assets/images/image-product-1-thumbnail.jpg';
-import removeIcon from '../assets/images/icon-delete.svg';
-import Checkout from './Checkout';
+import mainImg from '../../assets/images/image-product-1-thumbnail.jpg';
+import removeIcon from '../../assets/images/icon-delete.svg';
+import Checkout from '../Checkout';
 // styles
-import styles from '../sass/Cart.module.scss';
+import styles from './style.module.scss';
 
 function Cart({ deleteProduct }) {
 

@@ -1,14 +1,7 @@
-@import "./colors/colors.scss";
+@import "./variables/colors/colors.scss";
 
 // keyframes
-@keyframes Menu {
-  from {
-    margin-left: -400px;
-  }
-  to {
-    margin-left: 0;
-  }
-}
+@import "./common/keyframes.scss";
 
 header {
   @apply flex items-center md:items-start justify-between
