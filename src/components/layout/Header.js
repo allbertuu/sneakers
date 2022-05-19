@@ -9,15 +9,13 @@ import iconCart from '../../assets/images/icon-cart.svg';
 import imgAvatar from '../../assets/images/image-avatar.png';
 import navBars from '../../assets/images/icon-menu.svg';
 import iconClose from '../../assets/images/icon-close.svg';
-// styles
-import '../../sass/Header.scss';
 
 function Header() {
 
-  const pages = ['Collections', 'Men', 'Women', 'About', 'Contact'];
+  const pagesList = ['Collections', 'Men', 'Women', 'About', 'Contact'];
 
-  const [isCartOpen, toggleCart] = useToggle();
-  const [isMenuOpen, toggleMenu] = useToggle();
+  const [isCartOpen, toggleCart] = useToggle(false);
+  const [isMenuOpen, toggleMenu] = useToggle(false);
 
   const { productsList, setProductsList } = useProductsList();
 
@@ -34,26 +32,26 @@ function Header() {
       <section className="navbar">
         <div className="logo">
           <a href="/">
-            <img src={logoImg} alt="logotipo" />
+            <img src={logoImg} alt="Logotipo" />
           </a>
         </div>
         <nav>
-          <button className="bars_icon" onClick={() => toggleMenu()}>
-            <img src={navBars} alt="Barra de navegação" />
+          <button className="bars_icon" onClick={toggleMenu}>
+            <img src={navBars} alt="Navbar icon" />
           </button>
           <ul>
-            {pages.map((page, key) => (
-              <li key={key}>{page}</li>
+            {pagesList.map((page, index) => (
+              <li key={index}>{page}</li>
             ))}
           </ul>
         </nav>
       </section>
       <section className="personal">
-        <div className="cart_icon">
-          <img src={iconCart} alt="Cart" onClick={() => toggleCart()} />
+        <div className="personal__cart">
+          <img src={iconCart} alt="Cart" onClick={toggleCart} />
         </div>
-        <div className={isCartOpen ? "profile_active" : "profile"}>
-          <img src={imgAvatar} alt="Avatar" onClick={() => toggleCart()} />
+        <div className={isCartOpen ? "personal__profile is-active" : "personal__profile"}>
+          <img src={imgAvatar} alt="Avatar" onClick={toggleCart} />
         </div>
       </section>
 
@@ -64,13 +62,13 @@ function Header() {
 
       {/* Modal menu */}
       {isMenuOpen &&
-        <div className="menuModal">
-          <aside className="comeMenu">
-            <img src={iconClose} onClick={() => toggleMenu()} alt='Close menu' />
+        <div className="u-full-screen-bg-black">
+          <aside className="c-menu">
+            <img src={iconClose} onClick={toggleMenu} alt='Close menu' />
             <nav>
               <ul>
-                {pages.map((page, key) => (
-                  <li key={key}>{page}</li>
+                {pagesList.map((page, index) => (
+                  <li key={index}>{page}</li>
                 ))}
               </ul>
             </nav>

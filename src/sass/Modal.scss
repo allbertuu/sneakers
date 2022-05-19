@@ -1,0 +1,42 @@
+.c-modal {
+  @apply relative px-4 max-w-2xl md:h-auto 
+  mx-5 md:mx-auto mt-20
+  bg-white rounded-lg shadow-md shadow-orange-600;
+  animation: 0.5s slidein;
+
+  &__header {
+    @apply flex justify-between items-start 
+    p-5
+    border-b;
+
+    h3 {
+      @apply text-xl font-semibold text-gray-900 lg:text-2xl;
+    }
+
+    button {
+      @apply text-sm marker:text-gray-400 hover:text-gray-900
+      bg-transparent hover:bg-gray-200
+      rounded-lg p-1.5;
+    }
+  }
+
+  &__body {
+    @apply p-6 space-y-6;
+
+    p {
+      @apply text-base leading-relaxed text-gray-500;
+    }
+  }
+
+  &__footer {
+    @apply flex items-center 
+    p-6 space-x-2 rounded-b 
+    border-t border-gray-200;
+
+    button {
+      padding: 0.5rem 1.25rem;
+      flex: none;
+      min-height: 25px;
+    }
+  }
+}

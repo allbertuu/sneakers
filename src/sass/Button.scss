@@ -1,0 +1,32 @@
+.c-btn {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex: 1;
+  transition: all ease 0.2s;
+
+  border-radius: .6rem;
+  color: #FFF;
+  font-weight: 700;
+  background-color: $primary-color;
+
+  &:hover {
+    background-color: $primary-color-light;
+  }
+
+  &:active {
+    background-color: $primary-color-dark;
+  }
+
+  &--add {
+    @apply shadow-xl shadow-orange-400/50;
+  
+    @media (min-width: 1024px) {
+      & {
+        flex: 2;
+      }
+    }
+  }
+}

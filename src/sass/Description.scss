@@ -1,49 +1,48 @@
-@import "./variables/colors/colors.scss";
-
-.brand,
-.c_price,
-.c_buttons {
-  user-select: none;
-}
-
-.container {
+.c-description {
   @apply flex flex-col justify-center flex-1
   px-4 sm:px-0
   mb-12 sm:mb-0;
   max-width: 450px;
   min-width: 250px;
 
-  .brand {
+  &__brand,
+  &__price,
+  &__buttons {
+    user-select: none;
+  }
+
+  &__brand {
     color: $primary-color;
     letter-spacing: 2px;
     font-weight: 700;
     font-size: small;
     @apply xl:text-base;
   }
+
   h1 {
     font-weight: 700;
     @apply text-2xl md:text-3xl lg:text-5xl
     pt-2 pb-4 lg:pt-4 lg:pb-6;
   }
-  p {
-    font-size: 1rem;
-    color: $secondary-color-dark;
 
+  > p {
     padding-bottom: 1.5rem;
+    color: $secondary-color-dark;
   }
-  .c_price {
+
+  &__price {
     @apply font-bold
     flex lg:flex-col justify-between items-center lg:items-start;
     padding-bottom: 2rem;
 
-    .c_with_discount {
+    &__with-discount {
       @apply flex items-center gap-2 lg:gap-4;
 
-      .price {
+      :first-child {
         @apply text-2xl sm:text-xl lg:text-3xl;
       }
 
-      .discount {
+      :last-child {
         color: $primary-color;
         background-color: $primary-color-lighter;
 
@@ -53,13 +52,13 @@
       }
     }
 
-    .no_discount {
+    &__without-discount {
       color: $secondary-color;
       text-decoration: line-through;
     }
   }
 
-  .c_buttons {
+  &__buttons {
     font-weight: 700;
     @apply flex flex-col lg:flex-row gap-4;
   }

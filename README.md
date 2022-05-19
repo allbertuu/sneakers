@@ -51,6 +51,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+- BEM methodology
 - TailwindCSS framework
 - Scss pre-processor
 - Mobile-first workflow
@@ -90,6 +91,8 @@ Users should be able to:
 
 - [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb?hl=en) - This helped me to viewing my page on different screens at once. I really liked this extension and I think you too.
 - I liked so much [this post](https://dev.to/gitanshu_choudhary/crud-operations-in-modern-javascript-379e) about CRUD operations and the logic around it. It helped me to understanding more and better about that subject.
+- [BEM CSS Guidelines](https://cssguidelin.es/#bem-like-naming)
+- [CSS Architecture for Design Systems](https://bradfrost.com/blog/post/css-architecture-for-design-systems/)
 
 ## Author 🙎🏻‍♂️
 

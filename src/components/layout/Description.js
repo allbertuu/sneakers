@@ -7,14 +7,10 @@ import iconMinus from "../../assets/images/icon-minus.svg";
 import iconPlus from "../../assets/images/icon-plus.svg";
 import btnClose from "../../assets/images/close-modal.svg";
 import iconCart from '../../assets/images/icon-cart-white.svg';
-// styles
-import description from '../../sass/Description.module.scss';
-import countStyles from '../../sass/Count.module.scss';
-import button from '../../sass/Button.module.scss';
 
 function Description() {
 
-  const price = 125.00.toLocaleString('en-US', {style: 'currency', currency: 'USD', currencySign: 'standard'});
+  const price = 125.00.toLocaleString('en-US', { style: 'currency', currency: 'USD', currencySign: 'standard' });
 
   const [count, setCount] = useState(0);
 
@@ -51,59 +47,57 @@ function Description() {
   }
 
   return (
-    <section className={description.container}>
-      <span className={description.brand}>SNEAKER COMPANY</span>
+    <section className="c-description">
+      <span className="c-description__brand">SNEAKER COMPANY</span>
       <h1>Fall Limited Edition Sneakers</h1>
       <p>
         These low-profile sneakers are your perfect casual wear companion.
         Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
       </p>
-      <div className={description.c_price}>
-        <div className={description.c_with_discount}>
-          <span className={description.price}>{price}</span>
-          <div className={description.discount}>50%</div>
+      <div className="c-description__price">
+        <div className="c-description__price__with-discount">
+          <span>{price}</span>
+          <span>50%</span>
         </div>
-        <span className={description.no_discount}>&#36;250.00</span>
+        <span className="c-description__price__without-discount">&#36;250.00</span>
       </div>
 
 
-      <form onSubmit={(e) => handleSubmit(e)} className={description.c_buttons}>
-        <div className={countStyles.container}>
+      <form onSubmit={(e) => handleSubmit(e)} className="c-description__buttons">
+        <div className="c-count">
           <button onClick={subtractOne}>
             <img src={iconMinus} alt='subtract 1' />
           </button>
-          <div className={countStyles.display}>{count}</div>
+          <span className="c-count__display">{count}</span>
           <button onClick={() => setCount(count + 1)}>
             <img src={iconPlus} alt='add 1' />
           </button>
         </div>
 
         {isOpen &&
-          <div aria-hidden="true" className={countStyles.c_modal}>
-            <div className={countStyles.modal}>
-              <div className={countStyles.modal_content}>
-                <div className={countStyles.modal_header}>
-                  <h3>
-                    Oops!
-                  </h3>
-                  <button type="button" onClick={() => toggle()}>
-                    <img src={btnClose} alt="Fechar modal" />
-                  </button>
-                </div>
-                <div className={countStyles.modal_body}>
-                  <p>
-                    Please, don't press the remove button without having something in the count.
-                  </p>
-                </div>
-                <div className={countStyles.modal_footer}>
-                  <button onClick={() => toggle()} type="button" className={`${button.btn}`}>Ok</button>
-                </div>
+          <div aria-hidden="true" className="u-full-screen-bg-black">
+            <div className="c-modal">
+              <div className="c-modal__header">
+                <h3>
+                  Oops!
+                </h3>
+                <button type="button" onClick={toggle}>
+                  <img src={btnClose} alt="Close modal" />
+                </button>
+              </div>
+              <div className="c-modal__body">
+                <p>
+                  Please, don't press the remove button without having something in the count.
+                </p>
+              </div>
+              <div className="c-modal__footer">
+                <button onClick={toggle} type="button" className="c-btn">Ok</button>
               </div>
             </div>
           </div>
         }
 
-        <button type='submit' className={`${button.btn} ${button.btn_add}`} onClick={() => addToCart("Fall Limited Edition Sneakers")}>
+        <button type='submit' className="c-btn c-btn--add" onClick={() => addToCart("Fall Limited Edition Sneakers")}>
           <img src={iconCart} alt='Cart icon' />
           Add to cart
         </button>

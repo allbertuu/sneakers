@@ -1,9 +1,28 @@
+/*******************
+* TailwindCSS imports
+********************/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/*******************
+**** Default imports
+********************/
 @import "./variables/colors/colors.scss";
-
+@import "./common/utilities.scss";
+@import "./common/keyframes.scss";
+/*******************
+**** Components ****
+********************/
+@import "./Button.scss";
+@import "./Count.scss";
+@import "./Modal.scss";
+@import "./Header.scss";
+@import "./Description.scss";
+// @import "./Product.scss";
+@import "./Footer.scss";
+/*******************
+******** Page *******
+********************/
 body {
   font-size: 1rem;
   font-family: "Kumbh Sans", sans-serif;

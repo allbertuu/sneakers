@@ -1,16 +1,18 @@
-@import "./variables/colors/colors.scss";
-
 footer {
   @apply absolute inset-x-0;
   background-color: $primary-color;
-  user-select: none;
+  
+  ::selection {
+    color: $primary-color !important;
+    background-color: white !important;
+  }
 
-  .c_footer {
+  > div {
     @apply flex justify-center
     p-4 md:p-6
     text-white;
 
-    .author {
+    p {
       font-style: italic;
 
       a {
@@ -19,7 +21,6 @@ footer {
 
         &:hover {
           text-decoration: underline;
-          cursor: pointer;
         }
       }
     }
