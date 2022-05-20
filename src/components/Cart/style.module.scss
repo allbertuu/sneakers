@@ -1,14 +1,11 @@
 @import "../../sass/variables/colors/colors.scss";
-
-// keyframes
 @import "../../sass/common/keyframes.scss";
 
 .container {
   max-width: 300px;
   min-width: 300px;
   @apply absolute top-20 right-2 md:top-16 md:right-20
-bg-white md:max-w-lg
-  text-sm sm:text-base
+  bg-white md:max-w-lg
   shadow-xl rounded-xl;
 
   animation: 0.5s slidein;
