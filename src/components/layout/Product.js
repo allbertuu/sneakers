@@ -54,15 +54,15 @@ function Product() {
       {isOpen &&
         <div aria-hidden="true" className={styles.modal}>
           <section className={styles.modal_container}>
-            <button className={styles.closeIcon} onClick={() => toggle()}>
+            <button className={styles.closeIcon} onClick={toggle}>
               <CloseIcon fontSize='large' />
             </button>
             <div className={styles.c_main_img}>
-              <button className={styles.prev} onClick={() => prev()}>
+              <button className={styles.prev} onClick={prev}>
                 <ArrowBackIosNewIcon />
               </button>
               <img className={styles.main_img} src={mainImg} alt="Main product" />
-              <button className={styles.next} onClick={() => next()}>
+              <button className={styles.next} onClick={next}>
                 <ArrowForwardIosIcon />
               </button>
             </div>
