@@ -14,6 +14,12 @@ function Product() {
 
   const [isOpen, toggle] = useToggle();
 
+  function handleToggleMainImg() {
+    if (window.screen.width > 640) {
+      toggle();
+    }
+  }
+
   function prev() {
     let firstImage = productImagesList[0];
     if(mainImg === firstImage) {
@@ -35,7 +41,7 @@ function Product() {
   return (
     <>
       <section className="c-product">
-        <img src={mainImg} alt="Main product" onClick={toggle} />
+        <img src={mainImg} alt="Main product" onClick={handleToggleMainImg} />
         <div className="c-product__product-images">
           {productImagesList.map((srcProductImage, index) => (
             <div onClick={() => setMainImg(srcProductImage)} key={index}>
