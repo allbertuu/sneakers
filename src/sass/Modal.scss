@@ -40,3 +40,81 @@
     }
   }
 }
+
+.l-modal--product {
+  @apply hidden sm:block
+  overflow-hidden 
+  fixed right-0 left-0 top-0 z-50
+  justify-center items-center
+  h-full w-full
+  md:inset-0;
+  background-color: $color-black--75;
+}
+
+.c-modal--product {
+  animation: 1s slidein;
+  @apply flex flex-col justify-center h-screen flex-1 
+  gap-6
+  mx-auto;
+  max-width: 500px;
+
+  &__close-icon {
+    @apply lg:-mb-4 self-end;
+    color: white;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__l-main-img {
+    display: flex;
+    position: relative;
+
+    img {
+      @apply sm:rounded-2xl;
+      min-width: 250px;
+    }
+
+    button {
+      background-color: white;
+      color: black;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+
+      align-self: center;
+
+      &.prev,
+      &.next {
+        z-index: 99;
+        position: absolute;
+      }
+
+      &.prev {
+        left: -1.5rem;
+      }
+
+      &.next {
+        right: -1.5rem;
+      }
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  &__product-images {
+    @apply hidden sm:flex justify-center
+    gap-6;
+
+    img {
+      max-width: 75px;
+    }
+
+    .selected {
+      opacity: 0.5;
+      outline: 2px solid $primary-color;
+    }
+  }
+}

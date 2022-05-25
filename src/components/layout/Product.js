@@ -7,18 +7,12 @@ import { productImagesList } from '../../assets/scripts/productImagesList';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-// styles
-import styles from '../../sass/Product.module.scss';
 
 function Product() {
 
   const [mainImg, setMainImg] = useState(productImagesList[0]);
 
   const [isOpen, toggle] = useToggle();
-
-  function setSelectedImg(img) {
-    return img === mainImg ? styles.selected : undefined;
-  }
 
   function prev() {
     let firstImage = productImagesList[0];
@@ -40,36 +34,36 @@ function Product() {
 
   return (
     <>
-      <section className={styles.container}>
-        <img className={styles.main_img} src={mainImg} alt="Main product" onClick={() => toggle()} />
-        <div className={styles.c_product_images}>
+      <section className="c-product">
+        <img src={mainImg} alt="Main product" onClick={toggle} />
+        <div className="c-product__product-images">
           {productImagesList.map((srcProductImage, index) => (
             <div onClick={() => setMainImg(srcProductImage)} key={index}>
-              <img src={srcProductImage} alt="Product view" className={setSelectedImg(srcProductImage)} />
+              <img src={srcProductImage} alt="Product view" className={srcProductImage === mainImg ? "selected" : undefined} />
             </div>
           ))}
         </div>
       </section>
 
       {isOpen &&
-        <div aria-hidden="true" className={styles.modal}>
-          <section className={styles.modal_container}>
-            <button className={styles.closeIcon} onClick={toggle}>
+        <div aria-hidden="true" className="l-modal--product">
+          <section className="c-modal--product">
+            <button className="c-modal--product__close-icon" onClick={toggle}>
               <CloseIcon fontSize='large' />
             </button>
-            <div className={styles.c_main_img}>
-              <button className={styles.prev} onClick={prev}>
+            <div className="c-modal--product__l-main-img">
+              <button className="prev" onClick={prev}>
                 <ArrowBackIosNewIcon />
               </button>
-              <img className={styles.main_img} src={mainImg} alt="Main product" />
-              <button className={styles.next} onClick={next}>
+              <img src={mainImg} alt="Main product" />
+              <button className="next" onClick={next}>
                 <ArrowForwardIosIcon />
               </button>
             </div>
-            <div className={styles.c_product_images_modal}>
+            <div className="c-modal--product__product-images">
               {productImagesList.map((srcProductImage, index) => (
                 <div onClick={() => setMainImg(srcProductImage)} key={index}>
-                  <img src={srcProductImage} alt="Product view" className={setSelectedImg(srcProductImage)} />
+                  <img src={srcProductImage} alt="Product view" className={srcProductImage === mainImg ? "selected" : undefined} />
                 </div>
               ))}
             </div>

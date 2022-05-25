@@ -1,0 +1,36 @@
+.c-product__product-images,
+.c-modal--product__product-images {
+  img {
+    @apply rounded-xl;
+
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+}
+
+.c-product {
+  @apply flex flex-col flex-1 
+  gap-2 md:gap-4 lg:gap-8;
+  max-width: 450px;
+  user-select: none;
+
+  > img {
+    @apply sm:rounded-xl;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__product-images {
+    @apply hidden sm:flex 
+    gap-2 md:gap-4 lg:gap-8;
+
+    .selected {
+      opacity: 0.5;
+      outline: 2px solid $primary-color;
+    }
+  }
+}
