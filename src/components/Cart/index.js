@@ -21,10 +21,9 @@ function Cart({ deleteProduct }) {
       </div>
       <div className="c-cart__body">
         <ol className="c-cart__body__items">
-          {productsList.length === 0 && (
+          {productsList.length === 0 ? (
             <p className="withoutItems">Your cart is empty</p>
-          )}
-          {productsList.length > 0 &&
+          ) : (
             productsList.map((product, key) => (
               <li className="item" key={key}>
                 <div>{key + 1}</div>
@@ -43,9 +42,10 @@ function Cart({ deleteProduct }) {
                   onClick={() => deleteProduct(product.name)}
                 />
               </li>
-            ))}
+            ))
+          )}
         </ol>
-        {productsList.length > 0 && <Checkout />}
+        {productsList.length > 0 ? <Checkout /> : undefined}
       </div>
     </div>
   );
