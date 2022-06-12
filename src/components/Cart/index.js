@@ -4,8 +4,6 @@ import { useProductsList } from "../../hooks/useProductsList";
 import mainImg from "../../assets/images/image-product-1-thumbnail.jpg";
 import removeIcon from "../../assets/images/icon-delete.svg";
 import Checkout from "../Checkout";
-// styles
-import styles from "./style.module.scss";
 
 function Cart({ deleteProduct }) {
   const price = (125.0).toLocaleString("en-US", {
@@ -17,21 +15,21 @@ function Cart({ deleteProduct }) {
   const { productsList } = useProductsList();
 
   return (
-    <div className={styles.container}>
-      <div className={styles.cart_header}>
+    <div className="c-cart">
+      <div className="c-cart__header">
         <b>Cart</b>
       </div>
-      <div className={styles.cart_body}>
-        <ol className={styles.cart_items}>
+      <div className="c-cart__body">
+        <ol className="c-cart__body__items">
           {productsList.length === 0 && (
-            <p className={styles.withoutItems}>Your cart is empty</p>
+            <p className="withoutItems">Your cart is empty</p>
           )}
           {productsList.length > 0 &&
             productsList.map((product, key) => (
-              <li className={styles.item} key={key}>
+              <li className="item" key={key}>
                 <div>{key + 1}</div>
                 <img src={mainImg} alt="Product view" />
-                <div className={styles.info}>
+                <div className="info">
                   <p>{product.name}</p>
                   <div>
                     {price} x {product.count}{" "}
