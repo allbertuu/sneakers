@@ -1,9 +1,8 @@
-import { createContext, useState } from 'react';
+import { createContext, useState } from "react";
 
 export const ProductsListContext = createContext();
 
 export function ProductsListContextProvider({ children }) {
-
   const [productsList, setProductsList] = useState([]);
 
   return (
@@ -11,4 +10,4 @@ export function ProductsListContextProvider({ children }) {
       {children}
     </ProductsListContext.Provider>
   );
-} 
+}

@@ -2,10 +2,13 @@ function Footer() {
   return (
     <footer>
       <div>
-        <p>Made by <a href='https://www.github.com/allbertuu'>Alberto Albuquerque</a></p>
+        <p>
+          Made by{" "}
+          <a href="https://www.github.com/allbertuu">Alberto Vinícius A. dos Santos</a>
+        </p>
       </div>
     </footer>
   );
 }
 
-export default Footer
+export default Footer;
