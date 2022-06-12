@@ -5,6 +5,7 @@ import mainImg from "../../assets/images/image-product-1-thumbnail.jpg";
 import removeIcon from "../../assets/images/icon-delete.svg";
 import Checkout from "../Checkout";
 
+
 function Cart({ deleteProduct }) {
   const price = (125.0).toLocaleString("en-US", {
     style: "currency",
