@@ -1,19 +1,15 @@
-// hooks
-import { useProductsList } from "../../hooks/useProductsList";
 // icons and imgs
 import mainImg from "../../assets/images/image-product-1-thumbnail.jpg";
 import removeIcon from "../../assets/images/icon-delete.svg";
 import Checkout from "../Checkout";
 
 
-function Cart({ deleteProduct }) {
+function Cart() {
   const price = (125.0).toLocaleString("en-US", {
     style: "currency",
     currency: "USD",
     currencySign: "standard",
   });
-
-  const { productsList } = useProductsList();
 
   return (
     <div className="c-cart">
@@ -22,7 +18,7 @@ function Cart({ deleteProduct }) {
       </div>
       <div className="c-cart__body">
         <ol className="c-cart__body__items">
-          {productsList.length === 0 ? (
+          {/* {productsList.length === 0 ? (
             <p className="withoutItems">Your cart is empty</p>
           ) : (
             productsList.map((product, key) => (
@@ -44,9 +40,9 @@ function Cart({ deleteProduct }) {
                 />
               </li>
             ))
-          )}
+          )} */}
         </ol>
-        {productsList.length > 0 ? <Checkout /> : undefined}
+        {/* {productsList.length > 0 ? <Checkout /> : undefined} */}
       </div>
     </div>
   );

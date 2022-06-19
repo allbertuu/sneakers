@@ -1,6 +1,5 @@
 // hooks
 import useToggle from "../../hooks/useToggle";
-import { useProductsList } from "../../hooks/useProductsList";
 // components
 import Cart from "../Cart";
 // icons and imgs
@@ -16,15 +15,6 @@ function Header() {
   const [isCartOpen, toggleCart] = useToggle(false);
   const [isMenuOpen, toggleMenu] = useToggle(false);
 
-  const { productsList, setProductsList } = useProductsList();
-
-  function deleteProduct(productName = "") {
-    let productToDelete = productsList.findIndex((product) => {
-      return product.name === productName;
-    });
-    productsList.splice(productToDelete, 1);
-    setProductsList([...productsList]);
-  }
 
   return (
     <header>
@@ -59,7 +49,7 @@ function Header() {
       </section>
 
       {/* Modal cart */}
-      {isCartOpen && <Cart deleteProduct={deleteProduct} />}
+      {isCartOpen && <Cart />}
 
       {/* Modal menu */}
       {isMenuOpen && (

@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 // hooks
 import useToggle from "../../hooks/useToggle";
-import { useProductsList } from "../../hooks/useProductsList";
 // icons
 import iconMinus from "../../assets/images/icon-minus.svg";
 import iconPlus from "../../assets/images/icon-plus.svg";
@@ -17,18 +16,14 @@ function Description() {
 
   const [count, setCount] = useState(0);
 
-  function handleSubmit(e) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
   }
 
-  //logic of count
   function subtractOne() {
     count === 0 ? toggle() : setCount(count - 1);
   }
   const [isOpen, toggle] = useToggle();
-
-  //logic of addToCart
-  const { productsList, setProductsList } = useProductsList();
 
   function addToCart(productToAdd = "Product") {
     // don't add nonexistent product
@@ -36,16 +31,15 @@ function Description() {
       return;
     }
     // update existent product (if have), if not: add new
-    let productToUpdate = productsList.findIndex((product) => {
-      return product.name === productToAdd;
-    });
-    if (productToUpdate === -1) {
-      productsList.push({ name: productToAdd, count: count });
-    } else {
-      productsList[productToUpdate].count += count;
-    }
+    // let productToUpdate = productsList.findIndex((product) => {
+    //   return product.name === productToAdd;
+    // });
+    // if (productToUpdate === -1) {
+    //   productsList.push({ name: productToAdd, count: count });
+    // } else {
+    //   productsList[productToUpdate].count += count;
+    // }
     setCount(0);
-    setProductsList([...productsList]);
   }
 
   return (
