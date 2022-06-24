@@ -7,7 +7,7 @@ import iconPlus from "../../assets/images/icon-plus.svg";
 import btnClose from "../../assets/images/close-modal.svg";
 import iconCart from "../../assets/images/icon-cart-white.svg";
 
-function Description() {
+export default function Description() {
   const price = (125.0).toLocaleString("en-US", {
     style: "currency",
     currency: "USD",
@@ -111,5 +111,3 @@ function Description() {
     </section>
   );
 }
-
-export default Description;

@@ -6,17 +6,15 @@ import Footer from "./components/layout/Footer";
 // styles
 import "./sass/App.scss";
 
-function App() {
+export default function App() {
   return (
-      <div className="container">
-        <Header />
-        <main>
-          <Product />
-          <Description />
-        </main>
-        <Footer />
-      </div>
+    <div className="container">
+      <Header />
+      <main>
+        <Product />
+        <Description />
+      </main>
+      <Footer />
+    </div>
   );
 }
-
-export default App;

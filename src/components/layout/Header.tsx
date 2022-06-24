@@ -9,12 +9,11 @@ import imgAvatar from "../../assets/images/image-avatar.png";
 import navBars from "../../assets/images/icon-menu.svg";
 import iconClose from "../../assets/images/icon-close.svg";
 
-function Header() {
+export default function Header() {
   const pagesList = ["Collections", "Men", "Women", "About", "Contact"];
 
   const [isCartOpen, toggleCart] = useToggle(false);
   const [isMenuOpen, toggleMenu] = useToggle(false);
-
 
   return (
     <header>
@@ -69,5 +68,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;

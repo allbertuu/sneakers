@@ -3,8 +3,7 @@ import mainImg from "../../assets/images/image-product-1-thumbnail.jpg";
 import removeIcon from "../../assets/images/icon-delete.svg";
 import Checkout from "../Checkout";
 
-
-function Cart() {
+export default function Cart() {
   const price = (125.0).toLocaleString("en-US", {
     style: "currency",
     currency: "USD",
@@ -47,5 +46,3 @@ function Cart() {
     </div>
   );
 }
-
-export default Cart;
