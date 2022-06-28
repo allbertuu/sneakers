@@ -7,6 +7,10 @@ import iconPlus from "../../assets/images/icon-plus.svg";
 import btnClose from "../../assets/images/close-modal.svg";
 import iconCart from "../../assets/images/icon-cart-white.svg";
 
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../redux/slices/productsSlice";
+import { nanoid } from "@reduxjs/toolkit";
+
 export default function Description() {
   const price = (125.0).toLocaleString("en-US", {
     style: "currency",
@@ -15,6 +19,8 @@ export default function Description() {
   });
 
   const [count, setCount] = useState(0);
+  const [isOpen, toggle] = useToggle();
+  const dispatch = useDispatch();
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -23,24 +29,17 @@ export default function Description() {
   function subtractOne() {
     count === 0 ? toggle() : setCount(count - 1);
   }
-  const [isOpen, toggle] = useToggle();
 
-  function addToCart(productToAdd = "Product") {
-    // don't add nonexistent product
-    if (count === 0) {
-      return;
-    }
-    // update existent product (if have), if not: add new
-    // let productToUpdate = productsList.findIndex((product) => {
-    //   return product.name === productToAdd;
-    // });
-    // if (productToUpdate === -1) {
-    //   productsList.push({ name: productToAdd, count: count });
-    // } else {
-    //   productsList[productToUpdate].count += count;
-    // }
+  const handleAddProduct = () => {
+    dispatch(
+      addProduct({
+        id: nanoid(),
+        name: "Fall Limited Edition Sneakers",
+        count: count,
+      })
+    );
     setCount(0);
-  }
+  };
 
   return (
     <section className="c-description">
@@ -102,7 +101,7 @@ export default function Description() {
         <button
           type="submit"
           className="c-btn c-btn--add"
-          onClick={() => addToCart("Fall Limited Edition Sneakers")}
+          onClick={handleAddProduct}
         >
           <img src={iconCart} alt="Cart icon" />
           Add to cart

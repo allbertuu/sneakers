@@ -2,6 +2,11 @@
 import mainImg from "../../assets/images/image-product-1-thumbnail.jpg";
 import removeIcon from "../../assets/images/icon-delete.svg";
 import Checkout from "../Checkout";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  removeProduct,
+  selectProducts,
+} from "../../redux/slices/productsSlice";
 
 export default function Cart() {
   const price = (125.0).toLocaleString("en-US", {
@@ -10,6 +15,10 @@ export default function Cart() {
     currencySign: "standard",
   });
 
+  const dispatch = useDispatch();
+
+  const products = useSelector(selectProducts);
+
   return (
     <div className="c-cart">
       <div className="c-cart__header">
@@ -17,10 +26,10 @@ export default function Cart() {
       </div>
       <div className="c-cart__body">
         <ol className="c-cart__body__items">
-          {/* {productsList.length === 0 ? (
+          {products.length === 0 ? (
             <p className="withoutItems">Your cart is empty</p>
           ) : (
-            productsList.map((product, key) => (
+            products.map((product, key) => (
               <li className="item" key={key}>
                 <div>{key + 1}</div>
                 <img src={mainImg} alt="Product view" />
@@ -35,13 +44,13 @@ export default function Cart() {
                   src={removeIcon}
                   alt="Remove product"
                   className="self-center cursor-pointer"
-                  onClick={() => deleteProduct(product.name)}
+                  onClick={() => dispatch(removeProduct(product))}
                 />
               </li>
             ))
-          )} */}
+          )}
         </ol>
-        {/* {productsList.length > 0 ? <Checkout /> : undefined} */}
+        {products.length > 0 ? <Checkout /> : undefined}
       </div>
     </div>
   );
