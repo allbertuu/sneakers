@@ -28,8 +28,8 @@ export default function Header() {
             <img src={navBars} alt="Navbar icon" />
           </button>
           <ul>
-            {pagesList.map((page, index) => (
-              <li key={index}>{page}</li>
+            {pagesList.map((page) => (
+              <li key={page}>{page}</li>
             ))}
           </ul>
         </nav>
@@ -57,8 +57,8 @@ export default function Header() {
             <img src={iconClose} onClick={toggleMenu} alt="Close menu" />
             <nav>
               <ul>
-                {pagesList.map((page, index) => (
-                  <li key={index}>{page}</li>
+                {pagesList.map((page) => (
+                  <li key={page}>{page}</li>
                 ))}
               </ul>
             </nav>
