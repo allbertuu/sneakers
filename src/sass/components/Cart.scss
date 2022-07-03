@@ -1,8 +1,9 @@
 .c-cart {
+  width: 100%;
   max-width: 300px;
-  min-width: 300px;
+
+  background-color: white;
   @apply absolute top-20 right-2 md:top-16 md:right-20
-  bg-white md:max-w-lg
   shadow-xl rounded-xl;
 
   animation: 0.5s slidein;

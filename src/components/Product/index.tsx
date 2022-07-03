@@ -8,7 +8,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
-function Product() {
+export default function Product() {
   const [mainImg, setMainImg] = useState(productImagesList[0]);
 
   const [isOpen, toggle] = useToggle();
@@ -88,5 +88,3 @@ function Product() {
     </>
   );
 }
-
-export default Product;

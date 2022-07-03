@@ -1,6 +1,5 @@
 // hooks
 import useToggle from "../../hooks/useToggle";
-import { useProductsList } from "../../hooks/useProductsList";
 // components
 import Cart from "../Cart";
 // icons and imgs
@@ -10,21 +9,11 @@ import imgAvatar from "../../assets/images/image-avatar.png";
 import navBars from "../../assets/images/icon-menu.svg";
 import iconClose from "../../assets/images/icon-close.svg";
 
-function Header() {
+export default function Header() {
   const pagesList = ["Collections", "Men", "Women", "About", "Contact"];
 
   const [isCartOpen, toggleCart] = useToggle(false);
   const [isMenuOpen, toggleMenu] = useToggle(false);
-
-  const { productsList, setProductsList } = useProductsList();
-
-  function deleteProduct(productName = "") {
-    let productToDelete = productsList.findIndex((product) => {
-      return product.name === productName;
-    });
-    productsList.splice(productToDelete, 1);
-    setProductsList([...productsList]);
-  }
 
   return (
     <header>
@@ -39,8 +28,8 @@ function Header() {
             <img src={navBars} alt="Navbar icon" />
           </button>
           <ul>
-            {pagesList.map((page, index) => (
-              <li key={index}>{page}</li>
+            {pagesList.map((page) => (
+              <li key={page}>{page}</li>
             ))}
           </ul>
         </nav>
@@ -59,7 +48,7 @@ function Header() {
       </section>
 
       {/* Modal cart */}
-      {isCartOpen && <Cart deleteProduct={deleteProduct} />}
+      {isCartOpen && <Cart />}
 
       {/* Modal menu */}
       {isMenuOpen && (
@@ -68,8 +57,8 @@ function Header() {
             <img src={iconClose} onClick={toggleMenu} alt="Close menu" />
             <nav>
               <ul>
-                {pagesList.map((page, index) => (
-                  <li key={index}>{page}</li>
+                {pagesList.map((page) => (
+                  <li key={page}>{page}</li>
                 ))}
               </ul>
             </nav>
@@ -79,5 +68,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;

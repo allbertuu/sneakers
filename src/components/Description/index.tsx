@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 // hooks
 import useToggle from "../../hooks/useToggle";
-import { useProductsList } from "../../hooks/useProductsList";
 // icons
 import iconMinus from "../../assets/images/icon-minus.svg";
 import iconPlus from "../../assets/images/icon-plus.svg";
 import btnClose from "../../assets/images/close-modal.svg";
 import iconCart from "../../assets/images/icon-cart-white.svg";
 
-function Description() {
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../redux/slices/productsSlice";
+import { nanoid } from "@reduxjs/toolkit";
+
+export default function Description() {
   const price = (125.0).toLocaleString("en-US", {
     style: "currency",
     currency: "USD",
@@ -16,37 +19,27 @@ function Description() {
   });
 
   const [count, setCount] = useState(0);
+  const [isOpen, toggle] = useToggle();
+  const dispatch = useDispatch();
 
-  function handleSubmit(e) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
   }
 
-  //logic of count
   function subtractOne() {
     count === 0 ? toggle() : setCount(count - 1);
   }
-  const [isOpen, toggle] = useToggle();
 
-  //logic of addToCart
-  const { productsList, setProductsList } = useProductsList();
-
-  function addToCart(productToAdd = "Product") {
-    // don't add nonexistent product
-    if (count === 0) {
-      return;
-    }
-    // update existent product (if have), if not: add new
-    let productToUpdate = productsList.findIndex((product) => {
-      return product.name === productToAdd;
-    });
-    if (productToUpdate === -1) {
-      productsList.push({ name: productToAdd, count: count });
-    } else {
-      productsList[productToUpdate].count += count;
-    }
+  const handleAddProduct = () => {
+    dispatch(
+      addProduct({
+        id: nanoid(),
+        name: "Fall Limited Edition Sneakers",
+        count: count,
+      })
+    );
     setCount(0);
-    setProductsList([...productsList]);
-  }
+  };
 
   return (
     <section className="c-description">
@@ -108,7 +101,7 @@ function Description() {
         <button
           type="submit"
           className="c-btn c-btn--add"
-          onClick={() => addToCart("Fall Limited Edition Sneakers")}
+          onClick={handleAddProduct}
         >
           <img src={iconCart} alt="Cart icon" />
           Add to cart
@@ -117,5 +110,3 @@ function Description() {
     </section>
   );
 }
-
-export default Description;
