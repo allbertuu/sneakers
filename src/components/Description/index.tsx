@@ -31,13 +31,15 @@ export default function Description() {
   }
 
   const handleAddProduct = () => {
-    dispatch(
-      addProduct({
-        id: nanoid(),
-        name: "Fall Limited Edition Sneakers",
-        count: count,
-      })
-    );
+    if (count !== 0) {
+      dispatch(
+        addProduct({
+          id: nanoid(),
+          name: "Fall Limited Edition Sneakers",
+          count: count,
+        })
+      );
+    }
     setCount(0);
   };
 
