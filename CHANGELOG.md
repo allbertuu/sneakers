@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/allbertuu/sneakers/compare/v2.0.0...v2.0.1) (2022-07-04)
+
+
+### Bug Fixes
+
+* **cart:** add index prop on first div ([70a95af](https://github.com/allbertuu/sneakers/commit/70a95af54086eb77ad557ae7901fd182f14e4741))
+
 # [1.1.0](https://github.com/allbertuu/sneakers/compare/v1.0.0...v1.1.0) (2022-07-03)
 
 
