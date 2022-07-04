@@ -29,9 +29,9 @@ export default function Cart() {
           {products.length === 0 ? (
             <p className="withoutItems">Your cart is empty</p>
           ) : (
-            products.map((product) => (
+            products.map((product, index) => (
               <li className="item" key={product.id}>
-                <div>{key + 1}</div>
+                <div>{index + 1}</div>
                 <img src={mainImg} alt="Product view" />
                 <div className="info">
                   <p>{product.name}</p>
