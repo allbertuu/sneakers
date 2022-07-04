@@ -7,6 +7,16 @@ import {
   removeProduct,
   selectProducts,
 } from "../../redux/slices/productsSlice";
+import {
+  CartBody,
+  CartHeader,
+  CartWrapper,
+  Item,
+  ItemImage,
+  ItemInfo,
+  List,
+  WithoutItem,
+} from "./styled";
 
 export default function Cart() {
   const price = (125.0).toLocaleString("en-US", {
@@ -20,38 +30,38 @@ export default function Cart() {
   const products = useSelector(selectProducts);
 
   return (
-    <div className="c-cart">
-      <div className="c-cart__header">
+    <CartWrapper>
+      <CartHeader>
         <b>Cart</b>
-      </div>
-      <div className="c-cart__body">
-        <ol className="c-cart__body__items">
+      </CartHeader>
+      <CartBody>
+        <List>
           {products.length === 0 ? (
-            <p className="withoutItems">Your cart is empty</p>
+            <WithoutItem>Your cart is empty</WithoutItem>
           ) : (
             products.map((product, index) => (
-              <li className="item" key={product.id}>
+              <Item key={product.id}>
                 <div>{index + 1}</div>
-                <img src={mainImg} alt="Product view" />
-                <div className="info">
+                <ItemImage src={mainImg} alt="Product view" />
+                <ItemInfo>
                   <p>{product.name}</p>
                   <div>
                     {price} x {product.count}{" "}
                     <b className="text-black">&#36;{125.0 * product.count}</b>
                   </div>
-                </div>
+                </ItemInfo>
                 <img
                   src={removeIcon}
                   alt="Remove product"
                   className="self-center cursor-pointer"
                   onClick={() => dispatch(removeProduct(product))}
                 />
-              </li>
+              </Item>
             ))
           )}
-        </ol>
+        </List>
         {products.length > 0 ? <Checkout /> : undefined}
-      </div>
-    </div>
+      </CartBody>
+    </CartWrapper>
   );
 }
