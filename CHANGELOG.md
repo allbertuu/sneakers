@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/allbertuu/sneakers/compare/v2.0.1...v2.0.2) (2022-07-04)
+
+
+### Bug Fixes
+
+* **cart:** add conditional to handleAddProduct ([bc32fca](https://github.com/allbertuu/sneakers/commit/bc32fcafda621d616d0491e32ccc13b084f5b24e))
+
 ## [2.0.1](https://github.com/allbertuu/sneakers/compare/v2.0.0...v2.0.1) (2022-07-04)
 
 
