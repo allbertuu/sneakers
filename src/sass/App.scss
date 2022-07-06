@@ -22,26 +22,8 @@
 /*******************
 ******** Page *******
 ********************/
-body {
-  font-size: 1rem;
-  font-family: "Kumbh Sans", sans-serif;
-
-  ::selection {
-    color: white;
-    background-color: $primary-color;
-  }
-
-  &::-webkit-scrollbar {
-    width: 0.75rem;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: $primary-color;
-    border: 2px solid rgba(0, 0, 0, 0);
-  }
-}
-
-.container {
-  @apply w-full min-h-screen md:w-4/5 m-auto;
+.App {
+  @apply h-screen sm:px-14 mx-auto container;
 
   main {
     @apply flex flex-col sm:flex-row sm:justify-center 

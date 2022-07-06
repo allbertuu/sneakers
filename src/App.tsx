@@ -5,16 +5,20 @@ import Description from "./components/Description";
 import Footer from "./components/Footer";
 // styles
 import "./sass/App.scss";
+import { GlobalStyle } from "./styles/Global";
 
 export default function App() {
   return (
-    <div className="container">
-      <Header />
-      <main>
-        <Product />
-        <Description />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <GlobalStyle />
+      <div className="App">
+        <Header />
+        <main>
+          <Product />
+          <Description />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
