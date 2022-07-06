@@ -10,6 +10,7 @@ import iconCart from "../../assets/images/icon-cart-white.svg";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../redux/slices/productsSlice";
 import { nanoid } from "@reduxjs/toolkit";
+import Button from "../Button";
 
 export default function Description() {
   const price = (125.0).toLocaleString("en-US", {
@@ -92,22 +93,23 @@ export default function Description() {
                 </p>
               </div>
               <div className="c-modal__footer">
-                <button onClick={toggle} type="button" className="c-btn">
+                <Button onClick={toggle} type="button">
                   Ok
-                </button>
+                </Button>
               </div>
             </div>
           </div>
         )}
 
-        <button
+        <Button
+          shadow
+          className="lg:flex-auto h-12"
           type="submit"
-          className="c-btn c-btn--add"
           onClick={handleAddProduct}
         >
           <img src={iconCart} alt="Cart icon" />
           Add to cart
-        </button>
+        </Button>
       </form>
     </section>
   );

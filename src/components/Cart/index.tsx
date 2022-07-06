@@ -1,7 +1,6 @@
 // icons and imgs
 import mainImg from "../../assets/images/image-product-1-thumbnail.jpg";
 import removeIcon from "../../assets/images/icon-delete.svg";
-import Checkout from "../Checkout";
 import { useDispatch, useSelector } from "react-redux";
 import {
   removeProduct,
@@ -17,6 +16,7 @@ import {
   List,
   WithoutItem,
 } from "./styled";
+import Button from "../Button";
 
 export default function Cart() {
   const price = (125.0).toLocaleString("en-US", {
@@ -60,7 +60,9 @@ export default function Cart() {
             ))
           )}
         </List>
-        {products.length > 0 ? <Checkout /> : undefined}
+        {products.length > 0 ? (
+          <Button className="h-12">Checkout</Button>
+        ) : null}
       </CartBody>
     </CartWrapper>
   );
