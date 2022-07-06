@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/allbertuu/sneakers/compare/v2.0.2...v2.0.3) (2022-07-06)
+
+
+### Bug Fixes
+
+* remove import of cart.scss ([fa2d01c](https://github.com/allbertuu/sneakers/commit/fa2d01ced5efc67378951c147c185191278b75a5))
+
 ## [2.0.2](https://github.com/allbertuu/sneakers/compare/v2.0.1...v2.0.2) (2022-07-04)
 
 
