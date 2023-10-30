@@ -1,13 +1,9 @@
-# ⚠ Projeto sendo reformulado ⚠
-
 ![GitHub repo size](https://img.shields.io/github/repo-size/allbertuu/sneakers?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/allbertuu/sneakers?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/allbertuu/sneakers?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/allbertuu/sneakers?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/allbertuu/sneakers?style=for-the-badge)
 
 # E-commerce product page solution 📱
 
+That's a simples but complete product page for an e-commerce which sells sneakers.  
 This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
@@ -50,15 +46,15 @@ Users should be able to:
 
 ### Built with ⚙
 
+- [React](https://reactjs.org/) - JS library
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
 - BEM methodology
-- TailwindCSS framework
-- Scss pre-processor
+- TailwindCSS
+- Sass/SCSS
 - Mobile-first workflow
 - MUI React icons lib
-- [React](https://reactjs.org/) - JS library
 
 ### What I learned 📚
 
